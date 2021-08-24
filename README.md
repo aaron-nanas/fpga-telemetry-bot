@@ -10,6 +10,11 @@ WIP: An FPGA-based robot car with the following features:
 # Parts
 < Make a table of parts >
 
+# Project Timeline
+[] September: Interface sensors and motors, establish communication protocol between Zybo/Zedboard and ESP32
+[] October: Work on power and chassis once all external peripherals are functional
+[] November: Finalize bot
+
 # Development Tools
 * Software: Vivado
 * Languages: VHDL, Verilog, SystemVerilog, C++
