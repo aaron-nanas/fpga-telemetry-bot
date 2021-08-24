@@ -11,9 +11,9 @@ WIP: An FPGA-based robot car with the following features:
 < Make a table of parts >
 
 # Development Tools
-Software: Vivado
-Languages: VHDL, Verilog, SystemVerilog, C++
-Development Board Used: Zybo/Zedboard, ESP32
+* Software: Vivado
+* Languages: VHDL, Verilog, SystemVerilog, C++
+* Development Board Used: Zybo/Zedboard, ESP32
 
 # Contributors
 * Jose Martinez
