@@ -10,6 +10,7 @@ WIP: An FPGA-based robot car with the following features:
 # Parts
 | Part | QTY | Price ($) | Link |
 | --- | --- | --- | --- |
+| Zybo / Zedboard FPGA/SoC | -- | -- | --
 | FireBeetle ESP32 Microcontroller | 1 | 6.90 per unit | [Product Link](https://www.dfrobot.com/product-1590.html)
 | 12V 170 RPM DC Gear Motor | 2 | 15.00 per unit | [Product Link](https://www.servocity.com/170-rpm-econ-gear-motor/)
 | Dual Channel DC Motor Driver | 1 | 22.00 per unit | [Product Link](https://www.robotshop.com/en/cytron-10a-5-30v-dual-channel-dc-motor-driver.html)
