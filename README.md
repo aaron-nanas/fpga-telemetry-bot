@@ -5,7 +5,7 @@ WIP: An FPGA-based robot car with the following features:
 * 9-axis motion tracking
 
 # Block Diagram of Design
-< Show block diagram picture here >
+![Block Diagram](https://github.com/trokiando-csun/fpga-telemetry-bot/blob/main/screenshots/fpga-telemetry-block-diagram.png?raw=true)
 
 # Parts
 | Part | QTY | Price ($) | Link |
