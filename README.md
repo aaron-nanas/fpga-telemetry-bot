@@ -20,7 +20,7 @@ WIP: An FPGA-based robot car with the following features:
 | Humidity and Temperature Sensor | 1 | 10.00 per unit | [Product Link](https://www.sparkfun.com/products/13763)
 | 9DoF IMU Breakout | 1 | 17.00 per unit | [Product Link](https://www.amazon.com/SparkFun-Breakout-ICM-20948-connection-Accelerometer-Magnetometer/dp/B07VNV3WKL/)
 | 3604 Series Omni Wheel (14mm Bore, 120mm Diameter) | 2 | 9.00 per unit | [Product Link](https://www.servocity.com/3604-series-omni-wheel-14mm-bore-120mm-diameter/)
-| 8" Rubber Treaded Wheel | 1 | 12.00 per unit | [Product Link](https://www.robotshop.com/en/8-first-rubber-treaded-wheel.html)
+| 8" Rubber Treaded Wheel | 2 | 12.00 per unit | [Product Link](https://www.robotshop.com/en/8-first-rubber-treaded-wheel.html)
 
 # Project Timeline
 - [ ] September: Interface sensors and motors, establish communication protocol between Zybo/Zedboard and ESP32
