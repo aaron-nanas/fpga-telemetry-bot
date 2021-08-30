@@ -8,7 +8,11 @@ WIP: An FPGA-based robot car with the following features:
 < Show block diagram picture here >
 
 # Parts
-< Make a table of parts >
+| Part | QTY | Price ($) | Link |
+| --- | --- | --- | --- |
+| FireBeetle ESP32 Microcontroller | 1 | 6.90 per unit | [Product Link](https://www.dfrobot.com/product-1590.html)
+| GPS Option 1 | 1 | 275.00 per unit | [Product Link](https://www.sparkfun.com/products/15136)
+| GPS Option 2 | 1 | 70.00 per unit | [Product Link](https://www.sparkfun.com/products/17285)
 
 # Project Timeline
 - [ ] September: Interface sensors and motors, establish communication protocol between Zybo/Zedboard and ESP32
