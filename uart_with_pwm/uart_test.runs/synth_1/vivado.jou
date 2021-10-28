@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Oct 28 01:23:35 2021
+# Process ID: 170792
+# Current directory: /home/aaronnanas/vivado_projects/uart_test/uart_test.runs/synth_1
+# Command line: vivado -log top_bot_controller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_bot_controller.tcl
+# Log file: /home/aaronnanas/vivado_projects/uart_test/uart_test.runs/synth_1/top_bot_controller.vds
+# Journal file: /home/aaronnanas/vivado_projects/uart_test/uart_test.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source top_bot_controller.tcl -notrace
