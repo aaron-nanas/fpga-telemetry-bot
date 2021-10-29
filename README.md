@@ -33,3 +33,11 @@ WIP: An FPGA-based robot car with the following features:
 # Contributors
 * Jose Martinez
 * Aaron Nanas
+
+# References
+## General Design Ideas
+- [OpenCores](https://opencores.org/projects)
+    - **Note**: Requires an account to download design files
+## UART
+- [ECE UNM UART Slides](http://ece-research.unm.edu/jimp/vhdl_fpgas/slides/UART.pdf)
+- [Nandland: UART, Serial Port, RS-232 Interface](https://www.nandland.com/vhdl/modules/module-uart-serial-port-rs232.html)
