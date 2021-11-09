@@ -1,6 +1,5 @@
 -- Author: Aaron Nanas
 -- File: vga_controller.vhd
--- Modified From: https://github.com/Digilent/Zybo-Z7-20-Pmod-VGA
 -- Purpose: Serves as the VGA controller that interfaces with the Pmod VGA.
 -- This will output the original image to the monitor, and when the signal
 -- to apply a filter is sent, it will display the filtered image.
@@ -36,6 +35,10 @@ end vga_controller;
 
 architecture Behavioral of vga_controller is
 
+-- Clocking Wizard Instantiation
+-- For 1920x1080 @ 60 Hz, the output clock
+-- must be set to 148 MHz
+-- Input clock is 125 MHz (from Zybo)
 component clk_wiz_0
     port(
       clk_in1:              in std_logic;
@@ -77,8 +80,6 @@ signal vga_blue:                std_logic_vector(pixel_data_width-1 downto 0);
 signal vga_red_reg:             std_logic_vector(pixel_data_width-1 downto 0) := (others =>'0');
 signal vga_green_reg:           std_logic_vector(pixel_data_width-1 downto 0) := (others =>'0');
 signal vga_blue_reg:            std_logic_vector(pixel_data_width-1 downto 0) := (others =>'0');
-
-
 
 begin
 
@@ -150,26 +151,69 @@ begin
     o_led <= i_sw;
     if (display_active_flag = '1') then
         case (i_sw) is
+           -- Display only blue
            when "0001" =>
                 vga_red <= (others => '0');
-                vga_blue <= (others => '0');
-                vga_green <= (others => '1');
+                vga_blue <= (others => '1');
+                vga_green <= (others => '0');
+           -- Display upper half of screen as blue and lower half as red
            when "0010" =>
-                vga_red <= (others => '0');
-                vga_blue <= (others => '1');
+                if ((h_sync_counter < 1920) and (v_sync_counter < 540)) then
+                    vga_blue <= (others => '1');
+                else
+                    vga_blue <= (others => '0');
+                end if;
+                
+                if ((h_sync_counter < 1920) and (v_sync_counter > 540)) then
+                    vga_red <= (others => '1');
+                else
+                    vga_red <= (others => '0');
+                end if;
                 vga_green <= (others => '0');
+           -- Display upper third half as red, middle third half as blue, and lower third half as green
            when "0011" =>
-                vga_red <= (others => '0');
-                vga_blue <= (others => '1');
-                vga_green <= (others => '1');
+                if ((h_sync_counter < 1920) and (v_sync_counter < 360)) then
+                    vga_red <= (others => '1');
+                elsif ((h_sync_counter < 1920) and (v_sync_counter > 360 and v_sync_counter < 720)) then
+                    vga_blue <= (others => '1');
+                elsif ((h_sync_counter < 1920) and (v_sync_counter > 720)) then
+                    vga_green <= (others => '1');
+                end if;
+           -- Display Rainbow Pattern Horizontally
            when "0100" =>
-                vga_red <= (others => '1');
-                vga_blue <= (others => '0');
-                vga_green <= (others => '0');
+                if ((h_sync_counter < 1920) and (v_sync_counter < 154)) then
+                    vga_red <= (others => '1'); vga_green <= (others => '0'); vga_blue <= (others => '0');
+                elsif ((h_sync_counter < 1920) and (v_sync_counter > 154 and v_sync_counter < 308)) then
+                    vga_red <= (others => '1'); vga_green <= "0110"; vga_blue <= (others => '0');
+                elsif ((h_sync_counter < 1920) and (v_sync_counter > 308 and v_sync_counter < 462)) then
+                    vga_red <= (others => '1'); vga_green <= (others => '1'); vga_blue <= (others => '0');
+                elsif ((h_sync_counter < 1920) and (v_sync_counter > 462 and v_sync_counter < 616)) then
+                    vga_red <= (others => '0'); vga_green <= (others => '1'); vga_blue <= (others => '0');
+                elsif ((h_sync_counter < 1920) and (v_sync_counter > 616 and v_sync_counter < 770)) then
+                    vga_red <= (others => '0'); vga_green <= (others => '0'); vga_blue <= (others => '1');
+                elsif ((h_sync_counter < 1920) and (v_sync_counter > 770 and v_sync_counter < 924)) then
+                    vga_red <= "0101"; vga_green <= "0011"; vga_blue <= (others => '1');
+                elsif ((h_sync_counter < 1920) and (v_sync_counter > 924 and v_sync_counter < 1080)) then
+                    vga_red <= "1011"; vga_green <= "0011"; vga_blue <= (others => '1');
+                end if;
+           -- Display Rainbow Pattern Vertically
            when "0101" =>
-                vga_red <= (others => '1');
-                vga_blue <= (others => '0');
-                vga_green <= (others => '1');
+                if ((h_sync_counter < 274) and (v_sync_counter < 1080)) then
+                    vga_red <= (others => '1'); vga_green <= (others => '0'); vga_blue <= (others => '0');
+                elsif ((h_sync_counter > 274 and h_sync_counter < 548) and (v_sync_counter < 1080)) then
+                    vga_red <= (others => '1'); vga_green <= "0110"; vga_blue <= (others => '0');
+                elsif ((h_sync_counter > 548 and h_sync_counter < 822) and (v_sync_counter < 1080)) then
+                    vga_red <= (others => '1'); vga_green <= (others => '1'); vga_blue <= (others => '0');
+                elsif ((h_sync_counter > 822 and h_sync_counter < 1096) and (v_sync_counter < 1080)) then
+                    vga_red <= (others => '0'); vga_green <= (others => '1'); vga_blue <= (others => '0');
+                elsif ((h_sync_counter > 1096 and h_sync_counter < 1370) and (v_sync_counter < 1080)) then
+                    vga_red <= (others => '0'); vga_green <= (others => '0'); vga_blue <= (others => '1');
+                elsif ((h_sync_counter > 1370 and h_sync_counter < 1644) and (v_sync_counter < 1080)) then
+                    vga_red <= "0101"; vga_green <= "0011"; vga_blue <= (others => '1');
+                elsif ((h_sync_counter > 1644 and h_sync_counter < 1920) and (v_sync_counter < 1080)) then
+                    vga_red <= "1011"; vga_green <= "0011"; vga_blue <= (others => '1');
+                end if;
+           -- For other cases, display general colors
            when "0110" =>
                 vga_red <= (others => '1');
                 vga_blue <= (others => '1');
@@ -186,6 +230,7 @@ begin
                 vga_red <= "0011";
                 vga_blue <= (others => '0');
                 vga_green <= "1010";
+           -- Make default case to show entirely red
            when others =>
                 vga_red <= (others => '1');
                 vga_blue <= (others => '0');

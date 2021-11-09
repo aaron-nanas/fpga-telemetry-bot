@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date                      : Mon Nov  8 23:56:01 2021
+| Date                      : Tue Nov  9 02:10:18 2021
 | Host                      : Aaron-Linux running 64-bit Ubuntu 20.04.3 LTS
 | Command                   : report_io -file vga_controller_io_placed.rpt
 | Design                    : vga_controller

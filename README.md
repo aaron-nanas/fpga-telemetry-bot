@@ -2,7 +2,7 @@
 Implemented in VHDL, this project aims to achieve the following goals:
 - Establish UART between a microcontroller (ESP32) and an FPGA/SoC board such as the Zybo Z7-20
 - Using the ESP32's Wi-Fi capability, a web UI is created that will allow the user to control the robot wirelessly
-    - i.e. There will be no need to maintain connection between the computer and the FPGA board
+    - There will be no need to maintain connection between the computer and the FPGA board
     - The ESP32 will be programmed using either C or C++. It will provide an IP address that can be used to connect to the web UI, which will be designed using HTML/CSS
     - Depending on the user's input from the web UI, a corresponding function for the given command will be called. This will trigger the ESP32 to transmit data to the Zybo
 - Alternative Option for ESP32: Raspberry Pi
@@ -36,7 +36,7 @@ Implemented in VHDL, this project aims to achieve the following goals:
 
 # Development Tools
 * Software: Vivado
-* Languages: VHDL, C++, C, Python, MATLAB
+* Languages: VHDL, C++, C, Python, MATLAB, HTML/CSS
 * Development Board Used: Zybo Z7-20, ESP32, Raspberry Pi
 
 # Contributors
@@ -53,3 +53,19 @@ Implemented in VHDL, this project aims to achieve the following goals:
 
 ## VGA Controller
 - [Pmod VGA by Digilent](https://digilent.com/reference/pmod/pmodvga/start?redirect=1)
+
+# Testing Strategies
+### VGA
+- After the VGA controller has been written, verify its functionality by outputting several colors
+    - Create patterns such as rainbows or several blocks of different colors divided into sections
+    - Consult a [12-Bit Color Code](https://rangevoting.org/ColorCode2.html) tool to obtain hex values for RGB
+    - Observe how `h_sync_counter` and `v_sync_counter` are mapped onto the screen
+- Obtain a 12-bit RGB image matrix and output it on the screen
+
+### Suggested Values for VGA Timing
+
+| Resolution Format | Pixel Clock | H Front Porch Width | H Pulse Width | H Max | V Front Porch Width | V Pulse Width | V Max |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1920 x 1080 @ 60 Hz | 148.5 MHz | 88 | 44 | 2200 | 4 | 5 | 1125 |
+| 1280 x 1024 @ 60 Hz | 108 MHz | 48 | 112 | 1688 | 1 | 3 | 1066 |
+| 1280 x 720 @ 60 Hz | 74.25 MHz | 110 | 40 | 1650 | 5 | 5 | 750 |
