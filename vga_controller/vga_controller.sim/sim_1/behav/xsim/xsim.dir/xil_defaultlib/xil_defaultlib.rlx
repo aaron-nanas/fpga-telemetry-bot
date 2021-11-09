@@ -1,0 +1,8 @@
+0.7
+2020.2
+Nov 18 2020
+09:20:35
+/home/aaronnanas/vivado_projects/ece524_final_proj/vga_controller/vga_controller.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl,1636442644,vhdl,,,,clk_wiz_0;clk_wiz_0_clk_wiz_0_clk_wiz,,,,,,,,
+/home/aaronnanas/vivado_projects/ece524_final_proj/vga_controller/vga_controller.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+/home/aaronnanas/vivado_projects/ece524_final_proj/vga_controller/vga_controller.srcs/sim_1/new/tb_vga_controller.vhd,1636443904,vhdl,,,,tb_vga_controller,,,,,,,,
+/home/aaronnanas/vivado_projects/ece524_final_proj/vga_controller/vga_controller.srcs/sources_1/new/vga_controller.vhd,1636443456,vhdl,,,,vga_controller,,,,,,,,

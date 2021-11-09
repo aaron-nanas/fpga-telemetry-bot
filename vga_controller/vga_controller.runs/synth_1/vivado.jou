@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Nov  8 23:55:17 2021
+# Process ID: 22594
+# Current directory: /home/aaronnanas/vivado_projects/ece524_final_proj/vga_controller/vga_controller.runs/synth_1
+# Command line: vivado -log vga_controller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_controller.tcl
+# Log file: /home/aaronnanas/vivado_projects/ece524_final_proj/vga_controller/vga_controller.runs/synth_1/vga_controller.vds
+# Journal file: /home/aaronnanas/vivado_projects/ece524_final_proj/vga_controller/vga_controller.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source vga_controller.tcl -notrace

@@ -1,0 +1,30 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 94564f36cdf74b3791f8a86122c610d1 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_vga_controller_behav xil_defaultlib.tb_vga_controller xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module xil_defaultlib.glbl
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,9)(1,1)(1,4)(1,7)\]
+Compiling architecture mmcme2_adv_v of entity unisim.MMCME2_ADV [\MMCME2_ADV(clkfbout_mult_f=37.1...]
+Compiling architecture structure of entity xil_defaultlib.clk_wiz_0_clk_wiz_0_clk_wiz [clk_wiz_0_clk_wiz_0_clk_wiz_defa...]
+Compiling architecture structure of entity xil_defaultlib.clk_wiz_0 [clk_wiz_0_default]
+Compiling architecture behavioral of entity xil_defaultlib.vga_controller [vga_controller_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_vga_controller
+Built simulation snapshot tb_vga_controller_behav
