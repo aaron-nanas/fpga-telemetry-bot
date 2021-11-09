@@ -50,3 +50,6 @@ Implemented in VHDL, this project aims to achieve the following goals:
 ## UART
 - [ECE UNM UART Slides](http://ece-research.unm.edu/jimp/vhdl_fpgas/slides/UART.pdf)
 - [Nandland: UART, Serial Port, RS-232 Interface](https://www.nandland.com/vhdl/modules/module-uart-serial-port-rs232.html)
+
+## VGA Controller
+- [Pmod VGA by Digilent](https://digilent.com/reference/pmod/pmodvga/start?redirect=1)
