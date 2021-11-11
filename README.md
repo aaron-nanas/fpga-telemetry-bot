@@ -1,4 +1,7 @@
 # Description
+
+**Note:** Currently WIP. This project is expected to be completed in December.
+
 Implemented in VHDL, this project aims to achieve the following goals:
 - Establish UART between a microcontroller (ESP32) and an FPGA/SoC board such as the Zybo Z7-20
 - Using the ESP32's Wi-Fi capability, a web UI is created that will allow the user to control the robot wirelessly
