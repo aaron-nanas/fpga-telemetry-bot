@@ -30,7 +30,7 @@ entity filter_tb is
 end filter_tb;
 
 architecture Behavioral of filter_tb is
-component average_filter_fsm is
+component lapacian_filter is
     Port ( clk: in std_logic;
            rst: in std_logic;
            ena: in std_logic;
@@ -40,7 +40,7 @@ component average_filter_fsm is
            wea: out std_logic;
            output_a: out std_logic_vector(7 downto 0);
            output_d: out std_logic_vector(11 downto 0));
-end component average_filter_fsm;
+end component lapacian_filter;
 
 COMPONENT blk_mem_gen_0
   PORT (
@@ -68,7 +68,7 @@ BRAM0 : blk_mem_gen_0
     douta => din0_tb
   );
   
-AVE_FILTER: average_filter_fsm port map (clk => clk_tb, rst => rst_tb, ena => ena_tb, done => done_tb, addr0 => addr0_tb, 
+AVE_FILTER: lapacian_filter port map (clk => clk_tb, rst => rst_tb, ena => ena_tb, done => done_tb, addr0 => addr0_tb, 
                                          din0 => din0_tb, wea => wea_tb, output_a => output_a_tb, output_d => output_d_tb);
   
  process
@@ -76,10 +76,10 @@ AVE_FILTER: average_filter_fsm port map (clk => clk_tb, rst => rst_tb, ena => en
     variable outline: line;
  begin
     wait for 470ns;
-    for i in 0 to 239999 loop
-        write(outline, to_integer(unsigned(output_d_tb)));
+    for i in 0 to 249999 loop
+        write(outline, to_integer(signed(output_d_tb)));
         writeline(out_file, outline);
-        wait for 400ns;
+        wait for 240ns;
     end loop;
     file_close(out_file);
  end process;

@@ -4,6 +4,6 @@
 subplot(1, 3, 1),
 imshow(im1), title("Original Grayscale Image")
 subplot(1, 3, 2),
-imshow(IM3, []), title("Smoothed Image (MATLAB)")
+imshow(IM3, []), title("Edge Detection Image (MATLAB)")
 subplot(1, 3, 3),
-imshow(im2, []), title("Smoothed Image (VHDL)")
+imshow(im2, []), title("Edge Detection Image (VHDL)")

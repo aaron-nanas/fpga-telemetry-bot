@@ -3,8 +3,8 @@
 -- Engineer: Jose Luis Martinez
 -- 
 -- Create Date: 11/09/2021 08:37:22 PM
--- Design Name: Average Filter FSM
--- Module Name: average_filter_fsm - Behavioral
+-- Design Name: Average Filter 
+-- Module Name: average_filter - Behavioral
 -- Project Name: FPGA Telemetry Robot
 ----------------------------------------------------------------------------------
 
@@ -13,7 +13,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity average_filter_fsm is
+entity average_filter is
     Port ( clk: in std_logic;
            rst: in std_logic;
            ena: in std_logic;
@@ -23,9 +23,9 @@ entity average_filter_fsm is
            wea: out std_logic;
            output_a: out std_logic_vector(7 downto 0);
            output_d: out std_logic_vector(11 downto 0));
-end average_filter_fsm;
+end average_filter;
 
-architecture Behavioral of average_filter_fsm is
+architecture Behavioral of average_filter is
 
 type pl is array (8 downto 0) of integer;
 signal pixel_locations: pl := (602, -602, 1, -1, -601, -603, 601, 603, 0);

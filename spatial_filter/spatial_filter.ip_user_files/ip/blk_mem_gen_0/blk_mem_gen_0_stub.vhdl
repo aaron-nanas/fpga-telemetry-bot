@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Nov 12 22:23:44 2021
+-- Date        : Fri Nov 19 15:01:53 2021
 -- Host        : DESKTOP-LR85IAF running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               d:/Labs/ECE524/spatial_filter/spatial_filter.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.vhdl
+--               D:/Labs/ECE524/spatial_filter/spatial_filter.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.vhdl
 -- Design      : blk_mem_gen_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7k70tfbv676-1
