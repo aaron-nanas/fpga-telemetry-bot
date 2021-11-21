@@ -1,0 +1,1 @@
+# Spatial Filter Simulation Results
