@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FPGA Telemetry Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<h2>FPGA Telemetry Bot Control Web UI</h2>
+<p>Select a tab to control the robot:</p>
+
+<div class="container">
+  <ul class="nav nav-tabs nav-justified">
+    <li class="active"><a data-toggle="tab" href="#robot-drive-menu">Drive Control Menu</a></li>
+    <li><a data-toggle="tab" href="#image-processing-menu">Image Processing</a></li>
+    <li><a data-toggle="tab" href="#uart-test-menu">Test UART Tx/Rx</a></li>
+    <li><a data-toggle="tab" href="#about-page">About the Project</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="robot-drive-menu" class="tab-pane fade">
+      <h3>Drive Control Menu</h3>
+      <p>Press the buttons below to drive the robot:</p>
+      <form method="post" action="/#robot-drive-menu">
+        <input type="submit" class="button" name="Forward" value="Forward"></button>
+        <input type="submit" class="button" name="Backward" value="Backward"></button>
+      </form> 
+    </div>
+
+    <div id="image-processing-menu" class="tab-pane fade">
+      <h3>Spatial Filter Menu</h3>
+      <p>This section contains the controls for applying a spatial filter to an image.</p>
+      <p>Select a filter to apply:</p>
+      <select class="image-filter" name="image-filter" style="text-align: center;">
+        <option disabled hidden selected value>Choose Spatial Filter</option>
+        <option value="Grayscale">Grayscale</option>
+        <option value="Smoothing">Smoothing</option>
+        <option value="Edge Detection">Edge Detection</option>
+        <option value="Image Inversion">Image Inversion</option>
+      </select>
+      <h4>Current Selected Spatial Filter: </h4>
+      <p id="return image spatial filter"></p>
+      <h4>Input Image:</h4>
+      <h4>Output Image:</h4>
+    </div>
+
+    <div id="uart-test-menu" class="tab-pane fade">
+      <h3>UART Test</h3>
+      <p>This section contains options to test the UART between the FPGA and the Raspberry Pi.</p>
+      <form method="post" action="/#uart-test-menu">
+        <p>Half Duplex Tests:</p>
+        <input type="submit" class="button" name="Test Raspberry Pi to FPGA" value="Test Raspberry Pi to FPGA"></button>
+        <input type="submit" class="button" name="Test FPGA to Raspberry Pi" value="Test FPGA to Raspberry Pi"></button>
+      </form>
+      <p>Full Duplex Tests:</p>
+      <form method="post" action="/#uart-test-menu">
+        <input type="submit" class="button" name="Test Full Duplex Mode" value="Test Full Duplex Mode"></button>
+      </form>
+      <p>To stop data transmission, press the button below:</p>
+      <form method="post" action="/#uart-test-menu">
+        <input type="submit" class="button" style="background-color: #971b1b;" name="Stop Data Transmission" value="Stop Data Transmission"></button>
+      </form>
+      </div>
+
+    <div id="about-page" class="tab-pane fade">
+      <h3>FPGA Telemetry Bot Description</h3>
+      <p>This section contains the description for the FPGA Telemetry Bot project.</p>
+    </div>
+  </div>
+</div>
+<script>
+/***** Start of Button Section *****/
+function toggle_push_button(input_from_pushbutton)
+{
+  var http_request_data = newXMLHttpRequest();
+  http_request_data.open("GET", "/", true);
+  http_request_data.send();
+}
+/***** End of Button Section *****/
+
+/***** Start of Drop-Down Menu Section *****/
+function drop_down_event_listener()
+{
+  // Spatial Filter Event Listener
+  const selected_spatial_filter = document.querySelector('.image-filter');
+  const spatial_result = document.getElementById('return image spatial filter');
+
+  selected_spatial_filter.addEventListener('change', (event) => {
+  spatial_result.textContent = `${event.target.value}`;
+  });
+}
+
+  $(document).ready(function(){
+    var anchorHash = window.location.href.toString();
+    if( anchorHash.lastIndexOf('#') != -1 ) {
+        anchorHash = anchorHash.substr(anchorHash.lastIndexOf('#'));
+        if( $('a[href="'+ anchorHash +'"]').length > 0 ) {
+            $('a[href="'+ anchorHash +'"]').trigger('click');
+        }
+    }
+});
+  drop_down_event_listener();
+</script>
+   
+</body>
+</html> 
