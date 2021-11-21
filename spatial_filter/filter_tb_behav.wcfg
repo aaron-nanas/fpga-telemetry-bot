@@ -3,64 +3,60 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="filter_tb_behav.wdb" id="1">
+      <db_ref path="lapacian_filter_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="filter_tb" />
+            <top_module name="lapacian_filter_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="286176538fs"></ZoomEndTime>
-      <Cursor1Time time="578800000fs"></Cursor1Time>
+      <ZoomStartTime time="59999956104365fs"></ZoomStartTime>
+      <ZoomEndTime time="60001136779127fs"></ZoomEndTime>
+      <Cursor1Time time="60000940000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="140"></NameColumnWidth>
-      <ValueColumnWidth column_width="123"></ValueColumnWidth>
+      <ValueColumnWidth column_width="111"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="10" />
-   <wvobject fp_name="/filter_tb/clk_tb" type="logic">
+   <wvobject fp_name="/lapacian_filter_tb/clk_tb" type="logic">
       <obj_property name="ElementShortName">clk_tb</obj_property>
       <obj_property name="ObjectShortName">clk_tb</obj_property>
    </wvobject>
-   <wvobject fp_name="/filter_tb/rst_tb" type="logic">
+   <wvobject fp_name="/lapacian_filter_tb/rst_tb" type="logic">
       <obj_property name="ElementShortName">rst_tb</obj_property>
       <obj_property name="ObjectShortName">rst_tb</obj_property>
    </wvobject>
-   <wvobject fp_name="/filter_tb/ena_tb" type="logic">
+   <wvobject fp_name="/lapacian_filter_tb/ena_tb" type="logic">
       <obj_property name="ElementShortName">ena_tb</obj_property>
       <obj_property name="ObjectShortName">ena_tb</obj_property>
    </wvobject>
-   <wvobject fp_name="/filter_tb/done_tb" type="logic">
+   <wvobject fp_name="/lapacian_filter_tb/done_tb" type="logic">
       <obj_property name="ElementShortName">done_tb</obj_property>
       <obj_property name="ObjectShortName">done_tb</obj_property>
    </wvobject>
-   <wvobject fp_name="/filter_tb/wea_tb" type="logic">
+   <wvobject fp_name="/lapacian_filter_tb/wea_tb" type="logic">
       <obj_property name="ElementShortName">wea_tb</obj_property>
       <obj_property name="ObjectShortName">wea_tb</obj_property>
    </wvobject>
-   <wvobject fp_name="/filter_tb/addr0_tb" type="array">
+   <wvobject fp_name="/lapacian_filter_tb/addr0_tb" type="array">
       <obj_property name="ElementShortName">addr0_tb[17:0]</obj_property>
       <obj_property name="ObjectShortName">addr0_tb[17:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/filter_tb/din0_tb" type="array">
+   <wvobject fp_name="/lapacian_filter_tb/din0_tb" type="array">
       <obj_property name="ElementShortName">din0_tb[7:0]</obj_property>
       <obj_property name="ObjectShortName">din0_tb[7:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/filter_tb/output_a_tb" type="array">
+   <wvobject fp_name="/lapacian_filter_tb/output_a_tb" type="array">
       <obj_property name="ElementShortName">output_a_tb[7:0]</obj_property>
       <obj_property name="ObjectShortName">output_a_tb[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/filter_tb/output_d_tb" type="array">
+   <wvobject fp_name="/lapacian_filter_tb/output_d_tb" type="array">
       <obj_property name="ElementShortName">output_d_tb[11:0]</obj_property>
       <obj_property name="ObjectShortName">output_d_tb[11:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/filter_tb/AVE_FILTER/accu" type="array">
-      <obj_property name="ElementShortName">accu[11:0]</obj_property>
-      <obj_property name="ObjectShortName">accu[11:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/lapacian_filter_tb/CLK_PER" type="other">
+      <obj_property name="ElementShortName">CLK_PER</obj_property>
+      <obj_property name="ObjectShortName">CLK_PER</obj_property>
    </wvobject>
 </wave_config>

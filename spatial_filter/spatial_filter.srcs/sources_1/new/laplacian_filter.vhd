@@ -28,7 +28,7 @@ end lapacian_filter;
 architecture Behavioral of lapacian_filter is
 
 type pl is array (4 downto 0) of integer;
-signal pixel_locations: pl := (0, 1, -1, 603, -603);
+signal pixel_locations: pl := (0, 1, -1, 602, -602);
 signal accu: signed(11 downto 0);
 signal countV, countP, countH: integer; -- countV (kernal) countP(whole image)
 constant MAX_VAL: integer := 5;
