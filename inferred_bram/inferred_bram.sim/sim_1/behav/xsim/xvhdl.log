@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/aaronnanas/vivado_projects/ece524_final_proj/inferred_bram/inferred_bram.srcs/sources_1/new/inferred_bram_for_image.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'inferred_bram_for_image'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/aaronnanas/vivado_projects/ece524_final_proj/inferred_bram/inferred_bram.srcs/sim_1/new/tb_inferred_bram_for_image.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_inferred_bram_for_image'

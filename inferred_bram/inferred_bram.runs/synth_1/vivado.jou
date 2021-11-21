@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Nov 21 10:28:42 2021
+# Process ID: 45858
+# Current directory: /home/aaronnanas/vivado_projects/ece524_final_proj/inferred_bram/inferred_bram.runs/synth_1
+# Command line: vivado -log inferred_bram_for_image.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source inferred_bram_for_image.tcl
+# Log file: /home/aaronnanas/vivado_projects/ece524_final_proj/inferred_bram/inferred_bram.runs/synth_1/inferred_bram_for_image.vds
+# Journal file: /home/aaronnanas/vivado_projects/ece524_final_proj/inferred_bram/inferred_bram.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source inferred_bram_for_image.tcl -notrace
