@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Nov 19 14:40:18 2021
-# Process ID: 10744
-# Current directory: D:/Labs/ECE524/spatial_filter/spatial_filter.runs/synth_1
-# Command line: vivado.exe -log average_filter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source average_filter.tcl
-# Log file: D:/Labs/ECE524/spatial_filter/spatial_filter.runs/synth_1/average_filter.vds
-# Journal file: D:/Labs/ECE524/spatial_filter/spatial_filter.runs/synth_1\vivado.jou
+# Start of session at: Tue Nov 23 18:53:37 2021
+# Process ID: 3728
+# Current directory: D:/Labs/ECE524/fpga-telemetry-bot/spatial_filter/spatial_filter.runs/synth_1
+# Command line: vivado.exe -log top_level_filter_fsm.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_filter_fsm.tcl
+# Log file: D:/Labs/ECE524/fpga-telemetry-bot/spatial_filter/spatial_filter.runs/synth_1/top_level_filter_fsm.vds
+# Journal file: D:/Labs/ECE524/fpga-telemetry-bot/spatial_filter/spatial_filter.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source average_filter.tcl -notrace
+source top_level_filter_fsm.tcl -notrace

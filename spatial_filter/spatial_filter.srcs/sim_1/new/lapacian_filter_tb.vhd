@@ -38,7 +38,7 @@ component lapacian_filter is
            addr0: out std_logic_vector(17 downto 0);
            din0: in std_logic_vector(7 downto 0);
            wea: out std_logic;
-           output_a: out std_logic_vector(7 downto 0);
+           output_a: out std_logic_vector(18 downto 0);
            output_d: out std_logic_vector(11 downto 0));
 end component lapacian_filter;
 
@@ -76,7 +76,7 @@ AVE_FILTER: lapacian_filter port map (clk => clk_tb, rst => rst_tb, ena => ena_t
     variable outline: line;
  begin
     wait for 470ns;
-    for i in 0 to 249999 loop
+    for i in 0 to 239999 loop
         write(outline, to_integer(signed(output_d_tb)));
         writeline(out_file, outline);
         wait for 240ns;
@@ -86,9 +86,9 @@ AVE_FILTER: lapacian_filter port map (clk => clk_tb, rst => rst_tb, ena => ena_t
   
 clk_process: process
 begin
-    clk_tb <= '0';
-    wait for (CLK_PER/2);
     clk_tb <= '1';
+    wait for (CLK_PER/2);
+    clk_tb <= '0';
     wait for (CLK_PER/2);
 end process;
 

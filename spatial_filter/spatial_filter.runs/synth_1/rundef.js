@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log average_filter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source average_filter.tcl" );
+         "-log top_level_filter_fsm.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_filter_fsm.tcl" );
 
 
 

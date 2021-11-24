@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Labs/ECE524/spatial_filter/spatial_filter.runs/synth_1'
+HD_PWD='D:/Labs/ECE524/fpga-telemetry-bot/spatial_filter/spatial_filter.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log average_filter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source average_filter.tcl
+EAStep vivado -log top_level_filter_fsm.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_filter_fsm.tcl
