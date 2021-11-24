@@ -34,14 +34,14 @@ component top_level_filter_fsm is
     generic(
         data_width:         integer := 8;
         addr_width:         integer := 18;
-        num_filters:        integer := 2;
+        filters_width:        integer := 2;
         num_elements_input:       integer := 242_004;
         num_elements_output:       integer := 240_000
     );
     Port (  clk, rst: in std_logic;
             wea1, wea2, rea1, rea2: in  std_logic;
             start_filtering: in std_logic;
-            filter_select: in std_logic_vector(num_filters - 1 downto 0);
+            filter_select: in std_logic_vector(filters_width - 1 downto 0);
             bram1_a, bram2_a: in std_logic_vector(addr_width-1 downto 0);
             bram1_din, bram2_din: in std_logic_vector(data_width-1 downto 0);
             bram1_dout, bram2_dout: out std_logic_vector(data_width-1 downto 0);
@@ -73,7 +73,7 @@ begin
     wait for 106ms;
     for i in 0 to 239999 loop
         bram2_a_tb <= std_logic_vector(to_unsigned(i, 18));
-        write(outline, to_integer(signed(bram2_dout_tb)));
+        write(outline, to_integer(unsigned(bram2_dout_tb)));
         writeline(out_file, outline);
         wait for CLK_PER;
     end loop;
@@ -114,7 +114,7 @@ begin
     rst_tb <= '1';
     ena_tb <= '1';
     start_filtering_tb <= '0';
-    filter_select_tb <= "01";
+    filter_select_tb <= "10";
     wait for CLK_PER;
     rst_tb <= '0';
     wait for CLK_PER * 242004;

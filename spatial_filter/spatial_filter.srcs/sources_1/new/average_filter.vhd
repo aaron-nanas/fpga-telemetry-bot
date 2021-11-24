@@ -35,7 +35,7 @@ signal accu: unsigned(11 downto 0);
 signal countV, countP, countH, countU: integer; -- countV (kernal) countP(whole image)
 constant MAX_VAL: integer := 9;
 constant MAX: integer := 240000; -- 602 * 402
-constant MAX_VERTICAL: integer := 600;
+constant MAX_HORIZONTAL: integer := 600;
 constant BASE_ADDR_W: integer := 0; 
 constant BASE_ADDR_R: integer := 604;
 
@@ -56,14 +56,14 @@ begin
             output_a <= std_logic_vector(to_unsigned(BASE_ADDR_W, 18));
             output_d <= std_logic_vector(to_unsigned(0, 8));
         elsif(ena = '1') then
-            if(countP < MAX) then
+            if(countU < MAX) then
                 if(countV < 9) then
                     addr0 <= std_logic_vector(to_unsigned(BASE_ADDR_R + countP + pixel_locations(countV), 18));
                     accu <= accu + unsigned(din0);
                     wea <= '0';
                     countV <= countV + 1;
                 else
-                    if(countH < MAX_VERTICAL) then
+                    if(countH < MAX_HORIZONTAL) then
                         countV <= 0;
                         wea <= '1';
                         output_d <= std_logic_vector(resize((accu / 9), 8));

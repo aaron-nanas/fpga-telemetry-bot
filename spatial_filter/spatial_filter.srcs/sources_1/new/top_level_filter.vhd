@@ -27,14 +27,14 @@ entity top_level_filter_fsm is
     generic(
         data_width:         integer := 8;
         addr_width:         integer := 18;
-        num_filters:        integer := 2;
+        filters_width:        integer := 2;
         num_elements_input:       integer := 242_004;
         num_elements_output:       integer := 240_000
     );
     Port (  clk, rst: in std_logic;
             wea1, wea2, rea1, rea2: in  std_logic;
             start_filtering: in std_logic;
-            filter_select: in std_logic_vector(num_filters - 1 downto 0);
+            filter_select: in std_logic_vector(filters_width - 1 downto 0);
             bram1_a, bram2_a: in std_logic_vector(addr_width-1 downto 0);
             bram1_din, bram2_din: in std_logic_vector(data_width-1 downto 0);
             bram1_dout, bram2_dout: out std_logic_vector(data_width-1 downto 0);
@@ -43,6 +43,7 @@ end top_level_filter_fsm;
 
 architecture Behavioral of top_level_filter_fsm is
     
+    -- Infered BRAM Module
     component inferred_bram_for_image is
         generic(
             data_width:         integer := 8;
@@ -59,6 +60,7 @@ architecture Behavioral of top_level_filter_fsm is
              );
     end component inferred_bram_for_image;
 
+    -- Average Filter Module
     component average_filter is
         generic(
             data_width:         integer := 8;
@@ -73,6 +75,7 @@ architecture Behavioral of top_level_filter_fsm is
             output_d: out std_logic_vector(data_width-1 downto 0));
     end component average_filter;
     
+    -- Lapacian Filter Module
     component lapacian_filter is
         Port ( clk, rst, ena: in std_logic;
             done: out std_logic;
@@ -82,6 +85,17 @@ architecture Behavioral of top_level_filter_fsm is
             output_a: out std_logic_vector(17 downto 0);
             output_d: out std_logic_vector(7 downto 0));
     end component lapacian_filter;
+    
+    -- Threshold Filter Module
+    component threshold_filter is
+    Port ( clk, rst, ena: in std_logic;
+           done: out std_logic;
+           addr0: out std_logic_vector(17 downto 0);
+           din0: in std_logic_vector(7 downto 0);
+           wea: out std_logic;
+           output_a: out std_logic_vector(17 downto 0);
+           output_d: out std_logic_vector(7 downto 0));
+    end component threshold_filter;
     
     type FILTER_STATE is (IDLE, A_AVE_F, A_LAP_F, A_THR_F, F_DONE);
     signal f_state: FILTER_STATE := IDLE;
@@ -98,7 +112,7 @@ architecture Behavioral of top_level_filter_fsm is
     signal thr_addr0, thr_output_a: std_logic_vector(addr_width-1 downto 0);
     signal thr_din, thr_output_d: std_logic_vector(data_width-1 downto 0);
     
-    signal sel_bram1_a: std_logic_vector(1 downto 0);
+    signal sel_bram1_a: std_logic_vector(filters_width - 1 downto 0);
     signal bram1_a_mux, bram2_a_mux: std_logic_vector(addr_width-1 downto 0);
     signal bram_dout_in, bram2_d_mux: std_logic_vector(data_width-1 downto 0);
     signal wea1_in, wea2_in, rea1_in, rea2_in: std_logic;
@@ -113,12 +127,16 @@ BRAM1: inferred_bram_for_image generic map (data_width => data_width, addr_width
                                          addr => bram1_a_mux, data_in => bram1_din, data_out => bram_dout_in);
 BRAM2: inferred_bram_for_image port map (i_clk => clk, write_ena => wea2_in, read_enable => rea2_in, 
                                          addr => bram2_a_mux, data_in => bram2_d_mux, data_out => bram2_dout);
+                                         
 AVE_FILTER: average_filter port map (clk => clk, rst => rst, ena => avg_ena, done => avg_done, addr0 => avg_addr0, 
                                          din0 => bram_dout_in, wea => avg_wea, output_a => avg_output_a, output_d => avg_output_d);
 
 LAP_FILTER: lapacian_filter port map (clk => clk, rst => rst, ena => lap_ena, done => lap_done, addr0 => laP_addr0, 
                                          din0 => bram_dout_in, wea => lap_wea, output_a => lap_output_a, output_d => lap_output_d);
 
+THR_FILTER: threshold_filter port map (clk => clk, rst => rst, ena => thr_ena, done => thr_done, addr0 => thr_addr0, 
+                                         din0 => bram_dout_in, wea => thr_wea, output_a => thr_output_a, output_d => thr_output_d);
+                                         
 bram1_a_mux <= bram1_a when (sel_bram1_a = "00") else
                avg_addr0 when (sel_bram1_a = "01") else
                lap_addr0 when (sel_bram1_a = "10") else
