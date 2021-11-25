@@ -56,7 +56,7 @@ begin
             output_a <= std_logic_vector(to_unsigned(BASE_ADDR_W, 18));
             output_d <= std_logic_vector(to_unsigned(0, 8));
         elsif(ena = '1') then
-            if(countU < MAX) then
+            if(countP < MAX) then
                 if(countV < 9) then
                     addr0 <= std_logic_vector(to_unsigned(BASE_ADDR_R + countP + pixel_locations(countV), 18));
                     accu <= accu + unsigned(din0);
@@ -67,7 +67,7 @@ begin
                         countV <= 0;
                         wea <= '1';
                         output_d <= std_logic_vector(resize((accu / 9), 8));
-                        output_a <= std_logic_vector(to_unsigned(BASE_ADDR_W + countP, 18));
+                        output_a <= std_logic_vector(to_unsigned(BASE_ADDR_W + countU, 18));
                         countP <= countP + 1;
                         countH <= countH + 1;
                         countU <= countU + 1;
@@ -76,7 +76,7 @@ begin
                         countV <= 0;
                         wea <= '1';
                         output_d <= std_logic_vector(resize(accu/9, 8));
-                        output_a <= std_logic_vector(to_unsigned(BASE_ADDR_W + countP, 18));
+                        output_a <= std_logic_vector(to_unsigned(BASE_ADDR_W + countU, 18));
                         countU <= countU + 1;
                         accu <= (others => '0');
                         countH <= 0; 

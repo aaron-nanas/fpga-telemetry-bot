@@ -48,7 +48,7 @@ begin
             output_a <= std_logic_vector(to_unsigned(BASE_ADDR_W, 18));
             output_d <= std_logic_vector(to_unsigned(0, 8));
         elsif(ena = '1') then
-            if(countU < MAX) then
+            if(countP < MAX) then
                 if(countH < MAX_HORIZONTAL) then
                     countV <= 0;
                     wea <= '1';

@@ -66,14 +66,14 @@ begin
                                         bram1_dout => bram1_dout_tb, bram2_dout => bram2_dout_tb, done => done_tb, busy => busy_tb);
  
  process
-    file     out_file: text open write_mode is "D:\Labs\ECE524\fpga-telemetry-bot\spatial_filter\spatial_filter.srcs\sources_1\average_output.txt";
+    file     out_file: text open write_mode is "D:\Labs\ECE524\fpga-telemetry-bot\spatial_filter\spatial_filter.srcs\sources_1\lapacian_output.txt";
     variable outline: line;
  begin
     bram2_a_tb <= (others => '0');
     wait for 106ms;
     for i in 0 to 239999 loop
         bram2_a_tb <= std_logic_vector(to_unsigned(i, 18));
-        write(outline, to_integer(unsigned(bram2_dout_tb)));
+        write(outline, to_integer(signed(bram2_dout_tb)));
         writeline(out_file, outline);
         wait for CLK_PER;
     end loop;
@@ -114,7 +114,7 @@ begin
     rst_tb <= '1';
     ena_tb <= '1';
     start_filtering_tb <= '0';
-    filter_select_tb <= "10";
+    filter_select_tb <= "01";
     wait for CLK_PER;
     rst_tb <= '0';
     wait for CLK_PER * 242004;

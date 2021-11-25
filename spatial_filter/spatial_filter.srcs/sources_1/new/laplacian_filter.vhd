@@ -26,14 +26,14 @@ end lapacian_filter;
 architecture Behavioral of lapacian_filter is
 
 type pl is array (4 downto 0) of integer;
-signal pixel_locations: pl := (0, 1, -1, 602, -602);
+signal pixel_locations: pl := (1, -1, 602, -602, 0);
 signal accu: signed(11 downto 0);
 signal countV, countP, countH, countU: integer; -- countV (kernal) countP(whole image)
 constant MAX_VAL: integer := 5;
 constant MAX: integer := 240000; -- 602 * 402
 constant MAX_HORIZONTAL: integer := 600;
 constant BASE_ADDR_W: integer := 0; 
-constant BASE_ADDR_R: integer := 604;
+constant BASE_ADDR_R: integer := 603;
 
 
 begin
@@ -52,9 +52,9 @@ begin
             output_a <= std_logic_vector(to_unsigned(BASE_ADDR_W, 18));
             output_d <= std_logic_vector(to_unsigned(0, 8));
         elsif(ena = '1') then
-            if(countU < MAX) then
+            if(countP < MAX) then
                 if(countV < 5) then
-                    if (countV = 0) then
+                    if (countV = 4) then
                         addr0 <= std_logic_vector(to_unsigned(BASE_ADDR_R + countP + pixel_locations(countV), 18));
                         accu <= accu - to_signed(4*to_integer(signed(din0)), 12);
                         countV <= countV + 1;
