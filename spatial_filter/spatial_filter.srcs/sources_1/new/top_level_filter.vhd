@@ -31,11 +31,11 @@ use ieee.std_logic_unsigned.all;
 
 entity top_level_filter_fsm is
     generic(
-        data_width:         integer := 8;
-        addr_width:         integer := 18;
-        filters_width:        integer := 2;
-        num_elements_input:       integer := 242_004;
-        num_elements_output:       integer := 240_000
+        data_width:                 integer := 8;
+        addr_width:                 integer := 18;
+        filters_width:              integer := 2;
+        num_elements_input:         integer := 242_004;
+        num_elements_output:        integer := 240_000
     );
     Port (  clk, rst: in std_logic;
             wea1, wea2, rea1, rea2: in  std_logic;
@@ -280,6 +280,8 @@ begin
                     busy <= '0';
                     done <= '1'; 
                     avg_ena <= '0';
+                    lap_ena <= '0';
+                    thr_ena <= '0';
                     wea1_fsm <= '0';
                     rea1_fsm <= '0';
                     wea2_fsm <= '0';
