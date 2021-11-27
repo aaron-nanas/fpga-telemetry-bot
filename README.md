@@ -3,14 +3,10 @@
 **Note:** Currently WIP. This project is expected to be completed in December.
 
 Implemented in VHDL, this project aims to achieve the following goals:
-- Establish UART between a microcontroller (ESP32) and an FPGA/SoC board such as the Zybo Z7-20
-- Using the ESP32's Wi-Fi capability, a web UI is created that will allow the user to control the robot wirelessly
-    - There will be no need to maintain connection between the computer and the FPGA board
-    - The ESP32 will be programmed using either C or C++. It will provide an IP address that can be used to connect to the web UI, which will be designed using HTML/CSS
-    - Depending on the user's input from the web UI, a corresponding function for the given command will be called. This will trigger the ESP32 to transmit data to the Zybo
-- Alternative Option for ESP32: Raspberry Pi
-    - The Raspberry Pi will be programmed using Python. A module called `serial` will be used in order to transmit and receive bytes of data via UART
-    - Flask will be used to handle the web server, and the web UI is designed using HTML/CSS
+- Establish UART between an external device (which could be a microcontroller or a processor) such as a Raspberry Pi and an FPGA/SoC board such as the Zybo Z7-20
+- Using the Raspberry Pi's Wi-Fi capability, a web UI is created that allows the user to send signals to the FPGA wirelessly via UART. The FPGA will then perform the associated actions according to the instructions specified by the user.
+    - The Raspberry Pi will be programmed using Python. A module called `serial` will be used in order to transmit and receive UART data streams
+    - The web UI is designed using HTML/CSS/Javascript, with Flask serving as the web framework
 - Design a motor controller that instantiates multiple instances of a PWM generator to control four DC motors. The motor controller will include features such as speed control and changing directions
 - Design a sensor controller that will interface one or two of the following sensors: (1) Temperature and Humidity, (2) 9 DoF IMU, (3) GPS, and (4) Ultrasonic Range Finder
     - The communication protocols involved will be: I2C, SPI, or UART
@@ -20,6 +16,7 @@ Implemented in VHDL, this project aims to achieve the following goals:
     - A camera will be connected to either the ESP32 or the Raspberry Pi and capture a still photo
     - The image matrix will be sent via UART to the FPGA and stored in a Block RAM. Then, the FPGA will process the incoming data and apply a spatial filter
     - The resulting matrix will be sent back via UART, and the output image will be compared alongside the original image
+- To remove the need of programming the FPGA each time it powers on, a Zynq Boot Image is created in order to store the bitstream and other necessary files into the Zybo Z7-20's QSPI Flash. After it boots up, the Zybo will read the contents of the QSPI Flash.
 
 # Block Diagram of Design
 ![Block Diagram](./screenshots/updated-fpga-telemetry-block-diagram.png)
@@ -39,8 +36,8 @@ Implemented in VHDL, this project aims to achieve the following goals:
 
 # Development Tools
 * Software: Vivado
-* Languages: VHDL, C++, C, Python, MATLAB, HTML/CSS
-* Development Board Used: Zybo Z7-20, ESP32, Raspberry Pi
+* Languages: VHDL, Python, MATLAB, HTML/CSS/Javascript
+* Development Board Used: Zybo Z7-20, Raspberry Pi
 
 # Contributors
 * Jose Martinez
