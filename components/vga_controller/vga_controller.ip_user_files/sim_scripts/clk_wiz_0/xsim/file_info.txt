@@ -1,0 +1,2 @@
+clk_wiz_0_sim_netlist.vhdl,vhdl,xil_defaultlib,../../../../vga_controller.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl,incdir="../../../../vga_controller.gen/sources_1/ip/clk_wiz_0"
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,6 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Warning: Warning : [Unisim MMCME2_ADV-162] input CLKIN1 period and attribute CLKIN1_PERIOD are not same.
+Time: 5035 ns  Iteration: 5  Process: /tb_vga_controller/UUT_vga_controller/clk_manager_instance/inst/mmcm_adv_inst/pchk_p  File: /wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/data/vhdl/src/unisims/primitive/MMCME2_ADV.vhd
+Warning: Warning : [Unisim MMCME2_ADV-162] input CLKIN1 period and attribute CLKIN1_PERIOD are not same.
+Time: 5035 ns  Iteration: 5  Process: /tb_vga_controller/UUT_vga_controller/clk_manager_instance/inst/mmcm_adv_inst/pchk_p  File: /wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/data/vhdl/src/unisims/primitive/MMCME2_ADV.vhd

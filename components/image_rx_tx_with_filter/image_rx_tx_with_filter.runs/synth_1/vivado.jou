@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Nov 27 03:46:07 2021
+# Process ID: 331868
+# Current directory: /home/aaronnanas/vivado_projects/ece524_final_proj/image_rx_tx_with_filter/image_rx_tx_with_filter.runs/synth_1
+# Command line: vivado -log image_rx_tx_with_filter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source image_rx_tx_with_filter.tcl
+# Log file: /home/aaronnanas/vivado_projects/ece524_final_proj/image_rx_tx_with_filter/image_rx_tx_with_filter.runs/synth_1/image_rx_tx_with_filter.vds
+# Journal file: /home/aaronnanas/vivado_projects/ece524_final_proj/image_rx_tx_with_filter/image_rx_tx_with_filter.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source image_rx_tx_with_filter.tcl -notrace

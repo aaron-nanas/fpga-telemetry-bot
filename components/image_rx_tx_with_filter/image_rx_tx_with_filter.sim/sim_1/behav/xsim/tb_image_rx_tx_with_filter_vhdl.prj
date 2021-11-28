@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../image_rx_tx_with_filter.srcs/sources_1/new/average_filter.vhd" \
+"../../../../image_rx_tx_with_filter.srcs/sources_1/new/image_rx_tx_with_filter.vhd" \
+"../../../../image_rx_tx_with_filter.srcs/sources_1/new/inferred_bram_for_image.vhd" \
+"../../../../image_rx_tx_with_filter.srcs/sources_1/new/laplacian_filter.vhd" \
+"../../../../image_rx_tx_with_filter.srcs/sources_1/new/threshold_filter.vhd" \
+"../../../../image_rx_tx_with_filter.srcs/sources_1/new/top_level_filter_fsm.vhd" \
+"../../../../image_rx_tx_with_filter.srcs/sources_1/new/uart_rx.vhd" \
+"../../../../image_rx_tx_with_filter.srcs/sources_1/new/uart_tx.vhd" \
+"../../../../image_rx_tx_with_filter.srcs/sim_1/new/tb_image_rx_tx_with_filter.vhd" \
+
+# Do not sort compile order
+nosort

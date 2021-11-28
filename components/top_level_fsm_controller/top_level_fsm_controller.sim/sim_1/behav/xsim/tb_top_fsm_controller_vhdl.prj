@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../top_level_fsm_controller.srcs/sources_1/new/uart_rx_for_fsm.vhd" \
+"../../../../top_level_fsm_controller.srcs/sources_1/new/top_fsm_controller.vhd" \
+"../../../../top_level_fsm_controller.srcs/sim_1/new/tb_top_fsm_controller.vhd" \
+
+# Do not sort compile order
+nosort

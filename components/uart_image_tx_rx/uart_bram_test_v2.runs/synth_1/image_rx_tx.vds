@@ -1,0 +1,352 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Nov 22 20:32:55 2021
+# Process ID: 346058
+# Current directory: /home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.runs/synth_1
+# Command line: vivado -log image_rx_tx.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source image_rx_tx.tcl
+# Log file: /home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.runs/synth_1/image_rx_tx.vds
+# Journal file: /home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source image_rx_tx.tcl -notrace
+Command: synth_design -top image_rx_tx -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 346083
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2387.273 ; gain = 0.000 ; free physical = 17563 ; free virtual = 28351
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'image_rx_tx' [/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/sources_1/new/image_rx_tx.vhd:24]
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter addr_width bound to: 18 - type: integer 
+	Parameter num_elements bound to: 240000 - type: integer 
+	Parameter g_clk_cycles_bit bound to: 1085 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter addr_width bound to: 18 - type: integer 
+	Parameter num_elements bound to: 240000 - type: integer 
+INFO: [Synth 8-3491] module 'inferred_bram_for_image' declared at '/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/sources_1/new/inferred_bram_for_image.vhd:20' bound to instance 'inferred_bram_for_image_instance' of component 'inferred_bram_for_image' [/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/sources_1/new/image_rx_tx.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'inferred_bram_for_image' [/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/sources_1/new/inferred_bram_for_image.vhd:36]
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter addr_width bound to: 18 - type: integer 
+	Parameter num_elements bound to: 240000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'inferred_bram_for_image' (1#1) [/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/sources_1/new/inferred_bram_for_image.vhd:36]
+	Parameter g_clk_cycles_bit bound to: 1085 - type: integer 
+	Parameter num_elements bound to: 240000 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'uart_rx' declared at '/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/sources_1/new/uart_rx.vhd:22' bound to instance 'uart_rx_instance' of component 'uart_rx' [/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/sources_1/new/image_rx_tx.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'uart_rx' [/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/sources_1/new/uart_rx.vhd:41]
+	Parameter g_clk_cycles_bit bound to: 1085 - type: integer 
+	Parameter num_elements bound to: 240000 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_rx' (2#1) [/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/sources_1/new/uart_rx.vhd:41]
+	Parameter g_clk_cycles_bit bound to: 1085 - type: integer 
+	Parameter num_elements bound to: 240000 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'uart_tx' declared at '/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/sources_1/new/uart_tx.vhd:18' bound to instance 'uart_tx_instance' of component 'uart_tx' [/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/sources_1/new/image_rx_tx.vhd:135]
+INFO: [Synth 8-638] synthesizing module 'uart_tx' [/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/sources_1/new/uart_tx.vhd:40]
+	Parameter g_clk_cycles_bit bound to: 1085 - type: integer 
+	Parameter num_elements bound to: 240000 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_tx' (3#1) [/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/sources_1/new/uart_tx.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'image_rx_tx' (4#1) [/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/sources_1/new/image_rx_tx.vhd:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2409.141 ; gain = 21.867 ; free physical = 18282 ; free virtual = 29076
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2409.141 ; gain = 21.867 ; free physical = 18339 ; free virtual = 29132
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2409.141 ; gain = 21.867 ; free physical = 18339 ; free virtual = 29132
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2409.141 ; gain = 0.000 ; free physical = 18332 ; free virtual = 29126
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/constrs_1/new/zybo_z720_constraints.xdc]
+Finished Parsing XDC File [/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/constrs_1/new/zybo_z720_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.srcs/constrs_1/new/zybo_z720_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/image_rx_tx_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/image_rx_tx_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2560.953 ; gain = 0.000 ; free physical = 18235 ; free virtual = 29037
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2560.953 ; gain = 0.000 ; free physical = 18235 ; free virtual = 29037
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18258 ; free virtual = 29105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18258 ; free virtual = 29105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18258 ; free virtual = 29105
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'Rx_UART_State_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'Tx_UART_State_reg' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+            rx_start_bit |                              001 |                              001
+                 rx_data |                              010 |                              010
+             rx_stop_bit |                              011 |                              011
+                 rx_done |                              100 |                              100
+        rx_store_in_bram |                              101 |                              101
+            rx_bram_full |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Rx_UART_State_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+            tx_start_bit |                              001 |                              001
+          tx_serial_data |                              010 |                              010
+             tx_stop_bit |                              011 |                              011
+                 tx_done |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Tx_UART_State_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18266 ; free virtual = 29094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 2     
++---Registers : 
+	               18 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---RAMs : 
+	            1875K Bit	(240001 X 8 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   18 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   7 Input   11 Bit        Muxes := 1     
+	   5 Input   11 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   7 Input    8 Bit        Muxes := 1     
+	   7 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 17    
+	   7 Input    3 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 3     
+	   7 Input    1 Bit        Muxes := 6     
+	   5 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18263 ; free virtual = 29087
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping	Report (see note below)
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|image_rx_tx | inferred_bram_for_image_instance/single_port_bram_reg | 234 K x 8(READ_FIRST)  | W | R |                        |   |   | Port A           | 0      | 64     | 
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18114 ; free virtual = 28970
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18107 ; free virtual = 28963
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|image_rx_tx | inferred_bram_for_image_instance/single_port_bram_reg | 234 K x 8(READ_FIRST)  | W | R |                        |   |   | Port A           | 0      | 64     | 
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_7_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_7_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_7_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_7_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_7_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_7_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_7_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inferred_bram_for_image_instance/single_port_bram_reg_7_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18105 ; free virtual = 28961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18114 ; free virtual = 28960
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18114 ; free virtual = 28960
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18114 ; free virtual = 28960
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18114 ; free virtual = 28960
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18114 ; free virtual = 28960
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18114 ; free virtual = 28960
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    24|
+|3     |LUT1     |     8|
+|4     |LUT2     |    54|
+|5     |LUT3     |   118|
+|6     |LUT4     |     9|
+|7     |LUT5     |    25|
+|8     |LUT6     |    39|
+|9     |RAMB36E1 |    64|
+|11    |FDRE     |   179|
+|12    |IBUF     |     5|
+|13    |OBUF     |     5|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18114 ; free virtual = 28960
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2560.953 ; gain = 21.867 ; free physical = 18171 ; free virtual = 29017
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2560.953 ; gain = 173.680 ; free physical = 18171 ; free virtual = 29017
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2560.953 ; gain = 0.000 ; free physical = 18237 ; free virtual = 29100
+INFO: [Netlist 29-17] Analyzing 88 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2560.953 ; gain = 0.000 ; free physical = 18179 ; free virtual = 29045
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+62 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2560.953 ; gain = 173.797 ; free physical = 18327 ; free virtual = 29193
+INFO: [Common 17-1381] The checkpoint '/home/aaronnanas/vivado_projects/ece524_final_proj/uart_bram_test_v2/uart_bram_test_v2.runs/synth_1/image_rx_tx.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file image_rx_tx_utilization_synth.rpt -pb image_rx_tx_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 22 20:33:17 2021...

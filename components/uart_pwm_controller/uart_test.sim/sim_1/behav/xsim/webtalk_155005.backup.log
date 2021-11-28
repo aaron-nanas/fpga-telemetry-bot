@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Oct 28 00:57:20 2021
+# Process ID: 155005
+# Current directory: /home/aaronnanas/vivado_projects/uart_test/uart_test.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/aaronnanas/vivado_projects/uart_test/uart_test.sim/sim_1/behav/xsim/xsim.dir/tb_uart_rx_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/aaronnanas/vivado_projects/uart_test/uart_test.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/aaronnanas/vivado_projects/uart_test/uart_test.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/aaronnanas/vivado_projects/uart_test/uart_test.sim/sim_1/behav/xsim/xsim.dir/tb_uart_rx_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct 28 00:57:20 2021...

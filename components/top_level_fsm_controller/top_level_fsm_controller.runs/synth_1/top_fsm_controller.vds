@@ -1,0 +1,254 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Nov 28 00:16:11 2021
+# Process ID: 221624
+# Current directory: /home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.runs/synth_1
+# Command line: vivado -log top_fsm_controller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_fsm_controller.tcl
+# Log file: /home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.runs/synth_1/top_fsm_controller.vds
+# Journal file: /home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source top_fsm_controller.tcl -notrace
+Command: synth_design -top top_fsm_controller -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 221650
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2388.242 ; gain = 0.000 ; free physical = 17002 ; free virtual = 27500
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_fsm_controller' [/home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.srcs/sources_1/new/top_fsm_controller.vhd:75]
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter addr_width bound to: 18 - type: integer 
+	Parameter filters_width bound to: 8 - type: integer 
+	Parameter num_instruction_bytes bound to: 3 - type: integer 
+	Parameter instruction_reg_width bound to: 24 - type: integer 
+	Parameter num_elements_input bound to: 242004 - type: integer 
+	Parameter num_elements_output bound to: 240000 - type: integer 
+	Parameter g_clk_cycles_bit bound to: 135 - type: integer 
+	Parameter g_clk_cycles_bit bound to: 135 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter num_instruction_bytes bound to: 3 - type: integer 
+	Parameter instruction_reg_width bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'uart_rx_for_fsm' declared at '/home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.srcs/sources_1/new/uart_rx_for_fsm.vhd:22' bound to instance 'uart_rx_for_fsm_instance' of component 'uart_rx_for_fsm' [/home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.srcs/sources_1/new/top_fsm_controller.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'uart_rx_for_fsm' [/home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.srcs/sources_1/new/uart_rx_for_fsm.vhd:42]
+	Parameter g_clk_cycles_bit bound to: 135 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter num_instruction_bytes bound to: 3 - type: integer 
+	Parameter instruction_reg_width bound to: 24 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_rx_for_fsm' (1#1) [/home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.srcs/sources_1/new/uart_rx_for_fsm.vhd:42]
+WARNING: [Synth 8-614] signal 'o_rx_instruction_done' is read in the process but is not in the sensitivity list [/home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.srcs/sources_1/new/top_fsm_controller.vhd:155]
+WARNING: [Synth 8-614] signal 'filter_done_sig' is read in the process but is not in the sensitivity list [/home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.srcs/sources_1/new/top_fsm_controller.vhd:155]
+INFO: [Synth 8-256] done synthesizing module 'top_fsm_controller' (2#1) [/home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.srcs/sources_1/new/top_fsm_controller.vhd:75]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2388.242 ; gain = 0.000 ; free physical = 17019 ; free virtual = 27538
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2391.094 ; gain = 2.852 ; free physical = 17704 ; free virtual = 28223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2391.094 ; gain = 2.852 ; free physical = 17704 ; free virtual = 28223
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2391.094 ; gain = 0.000 ; free physical = 17698 ; free virtual = 28217
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.srcs/constrs_1/new/zybo_z720_constraints.xdc]
+Finished Parsing XDC File [/home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.srcs/constrs_1/new/zybo_z720_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.srcs/constrs_1/new/zybo_z720_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_fsm_controller_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_fsm_controller_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2542.844 ; gain = 0.000 ; free physical = 17695 ; free virtual = 28201
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2542.844 ; gain = 0.000 ; free physical = 17695 ; free virtual = 28201
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17767 ; free virtual = 28271
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17767 ; free virtual = 28271
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17767 ; free virtual = 28271
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'Rx_UART_State_reg' in module 'uart_rx_for_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                          0000001 |                              000
+            rx_start_bit |                          0000010 |                              001
+                 rx_data |                          0000100 |                              010
+             rx_stop_bit |                          0001000 |                              011
+  rx_byte_fully_received |                          0010000 |                              100
+    rx_update_byte_count |                          0100000 |                              101
+     rx_instruction_done |                          1000000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Rx_UART_State_reg' using encoding 'one-hot' in module 'uart_rx_for_fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17759 ; free virtual = 28263
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   7 Input   32 Bit        Muxes := 1     
+	   3 Input   24 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 1     
+	   7 Input   24 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	   7 Input    8 Bit        Muxes := 2     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 8     
+	   2 Input    3 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   7 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17757 ; free virtual = 28264
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17654 ; free virtual = 28157
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17654 ; free virtual = 28157
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17652 ; free virtual = 28155
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17640 ; free virtual = 28143
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17640 ; free virtual = 28143
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17640 ; free virtual = 28143
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17640 ; free virtual = 28143
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17640 ; free virtual = 28143
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17640 ; free virtual = 28143
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |OBUFT |     1|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17640 ; free virtual = 28143
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2542.844 ; gain = 2.852 ; free physical = 17697 ; free virtual = 28200
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2542.844 ; gain = 154.602 ; free physical = 17697 ; free virtual = 28200
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2542.844 ; gain = 0.000 ; free physical = 17779 ; free virtual = 28282
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2542.844 ; gain = 0.000 ; free physical = 17722 ; free virtual = 28225
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 2542.844 ; gain = 154.719 ; free physical = 17865 ; free virtual = 28369
+INFO: [Common 17-1381] The checkpoint '/home/aaronnanas/vivado_projects/ece524_final_proj/top_level_fsm_controller/top_level_fsm_controller.runs/synth_1/top_fsm_controller.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_fsm_controller_utilization_synth.rpt -pb top_fsm_controller_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 28 00:16:32 2021...

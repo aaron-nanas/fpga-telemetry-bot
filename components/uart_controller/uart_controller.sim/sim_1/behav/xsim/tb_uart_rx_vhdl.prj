@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../uart_controller.srcs/sources_1/new/uart_rx_with_ssd.vhd" \
+"../../../../uart_controller.srcs/sources_1/new/uart_rx_with_ssd_top.vhd" \
+"../../../../uart_controller.srcs/sources_1/new/uart_rx.vhd" \
+"../../../../uart_controller.srcs/sources_1/new/uart_tx.vhd" \
+"../../../../uart_controller.srcs/sources_1/new/uart_top_controller.vhd" \
+"../../../../uart_controller.srcs/sim_1/new/tb_uart_rx.vhd" \
+"../../../../uart_controller.srcs/sim_1/new/tb_uart_tx.vhd" \
+"../../../../uart_controller.srcs/sim_1/new/tb_uart_top_controller.vhd" \
+
+# Do not sort compile order
+nosort
