@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/aaronnanas/vivado_projects/ece524_final_proj/uart_controller/uart_controller.srcs/sources_1/new/uart_rx.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'uart_rx'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/aaronnanas/vivado_projects/ece524_final_proj/uart_controller/uart_controller.srcs/sources_1/new/uart_tx.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'uart_tx'

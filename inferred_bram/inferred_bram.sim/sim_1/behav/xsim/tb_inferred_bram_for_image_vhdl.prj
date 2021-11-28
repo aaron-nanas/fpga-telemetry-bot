@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../inferred_bram.srcs/sources_1/new/inferred_bram_for_image.vhd" \
-"../../../../inferred_bram.srcs/sim_1/new/tb_inferred_bram_for_image.vhd" \
-
-# Do not sort compile order
-nosort

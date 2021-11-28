@@ -1,1 +1,0 @@
--wto "6f27abab0b4749468af8d63ca3fc60d6" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "tb_inferred_bram_for_image_behav" "xil_defaultlib.tb_inferred_bram_for_image" -log "elaborate.log" 

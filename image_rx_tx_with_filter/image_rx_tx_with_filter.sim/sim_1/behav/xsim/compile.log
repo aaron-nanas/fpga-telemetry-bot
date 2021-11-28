@@ -1,2 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/aaronnanas/vivado_projects/ece524_final_proj/image_rx_tx_with_filter/image_rx_tx_with_filter.srcs/sim_1/new/tb_top_level_filter_fsm.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_top_level_filter_fsm'
