@@ -1,0 +1,114 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Sun Nov 28 17:01:17 2021
+| Host         : Aaron-Linux running 64-bit Ubuntu 20.04.3 LTS
+| Command      : report_control_sets -verbose -file image_rx_tx_with_filter_control_sets_placed.rpt
+| Design       : image_rx_tx_with_filter
+| Device       : xc7z020
+----------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    36 |
+|    Minimum number of control sets                        |    36 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    93 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    36 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     9 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    22 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             155 |           74 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              19 |            9 |
+| Yes          | No                    | No                     |             195 |           88 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             642 |          166 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------+-----------------------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+--------------+
+|   Clock Signal   |                             Enable Signal                             |                        Set/Reset Signal                        | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------+-----------------------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+--------------+
+|  i_clk_IBUF_BUFG | p_0_in                                                                |                                                                |                1 |              1 |         1.00 |
+|  i_clk_IBUF_BUFG | rx_instruction_active_IBUF                                            |                                                                |                1 |              1 |         1.00 |
+|  i_clk_IBUF_BUFG | uart_rx_for_fsm_instance/o_led[3]_i_1_n_1                             |                                                                |                2 |              4 |         2.00 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/AVE_FILTER/E[0]                         | i_reset_IBUF                                                   |                2 |              6 |         3.00 |
+|  i_clk_IBUF_BUFG | rx_instruction_active_IBUF                                            | i_reset_IBUF                                                   |                4 |              7 |         1.75 |
+|  i_clk_IBUF_BUFG | uart_tx_instance/read_enable_input_bram                               |                                                                |                5 |              8 |         1.60 |
+|  i_clk_IBUF_BUFG | uart_rx_for_fsm_instance/s_baud_counter[7]_i_1__1_n_1                 |                                                                |                3 |              8 |         2.67 |
+|  i_clk_IBUF_BUFG | uart_tx_instance/s_data_byte_tx[7]_i_1_n_1                            |                                                                |                3 |              8 |         2.67 |
+|  i_clk_IBUF_BUFG | uart_rx_instance/s_baud_counter[7]_i_1_n_1                            |                                                                |                3 |              8 |         2.67 |
+|  i_clk_IBUF_BUFG | uart_rx_for_fsm_instance/E[0]                                         | i_reset_IBUF                                                   |                3 |              8 |         2.67 |
+|  i_clk_IBUF_BUFG | read_enable_output_bram_IBUF                                          |                                                                |                7 |              8 |         1.14 |
+|  i_clk_IBUF_BUFG | uart_rx_for_fsm_instance/data_out_byte_rx_instruction_reg[15]_i_1_n_1 | i_reset_IBUF                                                   |                3 |              8 |         2.67 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/BRAM1/read_enable0_out                  |                                                                |                7 |              8 |         1.14 |
+|  i_clk_IBUF_BUFG | uart_tx_instance/s_baud_counter[7]_i_1__0_n_1                         |                                                                |                4 |              9 |         2.25 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/LAP_FILTER/addr0[17]_i_1__0_n_1         |                                                                |                5 |             18 |         3.60 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/THR_FILTER/addr0[17]_i_1__1_n_1         |                                                                |                6 |             18 |         3.00 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/AVE_FILTER/addr0[17]_i_1_n_1            |                                                                |                5 |             18 |         3.60 |
+|  i_clk_IBUF_BUFG |                                                                       | i_reset_IBUF                                                   |                9 |             19 |         2.11 |
+|  i_clk_IBUF_BUFG | uart_tx_instance/Tx_UART_State1__1                                    |                                                                |               12 |             26 |         2.17 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/INV_FILTER/pixel_result_0               |                                                                |               10 |             26 |         2.60 |
+|  i_clk_IBUF_BUFG | bram_output_addr                                                      |                                                                |               14 |             26 |         1.86 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/THR_FILTER/output_a[17]_i_1__1_n_1      | top_level_filter_fsm_instance/THR_FILTER/countH[0]_i_1__1_n_1  |                8 |             32 |         4.00 |
+|  i_clk_IBUF_BUFG | uart_rx_for_fsm_instance/rx_num_counter_reg[0]_i_1_n_1                | i_reset_IBUF                                                   |                8 |             32 |         4.00 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/INV_FILTER/output_a[17]_i_1__2_n_1      | top_level_filter_fsm_instance/INV_FILTER/countH[0]_i_1__2_n_1  |                8 |             32 |         4.00 |
+|  i_clk_IBUF_BUFG | uart_rx_instance/rx_num_counter_reg                                   | i_reset_IBUF                                                   |                6 |             32 |         5.33 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/LAP_FILTER/output_a[17]_i_1__0_n_1      | top_level_filter_fsm_instance/LAP_FILTER/countH[0]_i_1__0_n_1  |                8 |             32 |         4.00 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/AVE_FILTER/accu                         | top_level_filter_fsm_instance/AVE_FILTER/countH[0]_i_1_n_1     |                8 |             32 |         4.00 |
+|  i_clk_IBUF_BUFG | uart_tx_instance/tx_num_counter_reg                                   | i_reset_IBUF                                                   |                6 |             32 |         5.33 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/LAP_FILTER/accu[11]_i_2_n_1             | top_level_filter_fsm_instance/LAP_FILTER/accu[11]_i_1_n_1      |               11 |             44 |         4.00 |
+|  i_clk_IBUF_BUFG |                                                                       |                                                                |               25 |             47 |         1.88 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/AVE_FILTER/countV_rep[3]_i_2_n_1        | top_level_filter_fsm_instance/AVE_FILTER/countV_rep[3]_i_1_n_1 |               13 |             48 |         3.69 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/THR_FILTER/output_a[17]_i_1__1_n_1      | i_reset_IBUF                                                   |               15 |             69 |         4.60 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/LAP_FILTER/output_a[17]_i_1__0_n_1      | i_reset_IBUF                                                   |               19 |             76 |         4.00 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/AVE_FILTER/accu                         | i_reset_IBUF                                                   |               25 |             76 |         3.04 |
+|  i_clk_IBUF_BUFG | top_level_filter_fsm_instance/INV_FILTER/output_a[17]_i_1__2_n_1      | i_reset_IBUF                                                   |               19 |             76 |         4.00 |
+|  n_0_1019_BUFG   |                                                                       |                                                                |               49 |            108 |         2.20 |
++------------------+-----------------------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+--------------+
+
+

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1638147614">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BITSTR-SYSDEF" Name="image_rx_tx_with_filter.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="image_rx_tx_with_filter.ltx"/>
+  <File Type="BG-BGN" Name="image_rx_tx_with_filter.bgn"/>
+  <File Type="NPI_FILE" Name="image_rx_tx_with_filter.npi"/>
+  <File Type="BG-DRC" Name="image_rx_tx_with_filter.drc"/>
+  <File Type="RNPI_FILE" Name="image_rx_tx_with_filter.rnpi"/>
+  <File Type="CFI_FILE" Name="image_rx_tx_with_filter.cfi"/>
+  <File Type="RCFI_FILE" Name="image_rx_tx_with_filter.rcfi"/>
+  <File Type="PDI-FILE" Name="image_rx_tx_with_filter.pdi"/>
+  <File Type="BITSTR-MMI" Name="image_rx_tx_with_filter.mmi"/>
+  <File Type="BITSTR-BMM" Name="image_rx_tx_with_filter_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="image_rx_tx_with_filter.nky"/>
+  <File Type="BITSTR-RBT" Name="image_rx_tx_with_filter.rbt"/>
+  <File Type="BITSTR-MSK" Name="image_rx_tx_with_filter.msk"/>
+  <File Type="RBD_FILE" Name="image_rx_tx_with_filter.rbd"/>
+  <File Type="BG-BIN" Name="image_rx_tx_with_filter.bin"/>
+  <File Type="BG-BIT" Name="image_rx_tx_with_filter.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="image_rx_tx_with_filter_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="image_rx_tx_with_filter_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="image_rx_tx_with_filter_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="image_rx_tx_with_filter.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="image_rx_tx_with_filter_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="image_rx_tx_with_filter_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="image_rx_tx_with_filter_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="image_rx_tx_with_filter_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="image_rx_tx_with_filter_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="image_rx_tx_with_filter_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="image_rx_tx_with_filter_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="image_rx_tx_with_filter_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="image_rx_tx_with_filter_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="image_rx_tx_with_filter_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="image_rx_tx_with_filter_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="image_rx_tx_with_filter_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="image_rx_tx_with_filter_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="image_rx_tx_with_filter_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="image_rx_tx_with_filter_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="image_rx_tx_with_filter_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="image_rx_tx_with_filter_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="image_rx_tx_with_filter_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="image_rx_tx_with_filter_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="image_rx_tx_with_filter_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="image_rx_tx_with_filter_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="image_rx_tx_with_filter_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="image_rx_tx_with_filter_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="image_rx_tx_with_filter_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="image_rx_tx_with_filter_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="image_rx_tx_with_filter_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="image_rx_tx_with_filter_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="image_rx_tx_with_filter_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="image_rx_tx_with_filter_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="image_rx_tx_with_filter_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="image_rx_tx_with_filter_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="image_rx_tx_with_filter_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="image_rx_tx_with_filter_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="image_rx_tx_with_filter_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="image_rx_tx_with_filter_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="image_rx_tx_with_filter_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="image_rx_tx_with_filter_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="image_rx_tx_with_filter_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="image_rx_tx_with_filter_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="image_rx_tx_with_filter_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="image_rx_tx_with_filter_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="image_rx_tx_with_filter_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="image_rx_tx_with_filter_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="image_rx_tx_with_filter.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="image_rx_tx_with_filter_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="image_rx_tx_with_filter_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="image_rx_tx_with_filter_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="image_rx_tx_with_filter_timing_summary_init.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="image_rx_tx_with_filter_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="image_rx_tx_with_filter_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="image_rx_tx_with_filter_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="image_rx_tx_with_filter.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/new/average_filter.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../image_rx_tx_with_filter/image_rx_tx_with_filter.srcs/sources_1/new/average_filter.vhd"/>
+        <Attr Name="ImportTime" Val="1637913924"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/inferred_bram_for_image.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../image_rx_tx_with_filter/image_rx_tx_with_filter.srcs/sources_1/new/inferred_bram_for_image.vhd"/>
+        <Attr Name="ImportTime" Val="1637830890"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/inversion_filter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/laplacian_filter.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../image_rx_tx_with_filter/image_rx_tx_with_filter.srcs/sources_1/new/laplacian_filter.vhd"/>
+        <Attr Name="ImportTime" Val="1637914768"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/threshold_filter.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../image_rx_tx_with_filter/image_rx_tx_with_filter.srcs/sources_1/new/threshold_filter.vhd"/>
+        <Attr Name="ImportTime" Val="1637895498"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/top_level_filter_fsm.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../image_rx_tx_with_filter/image_rx_tx_with_filter.srcs/sources_1/new/top_level_filter_fsm.vhd"/>
+        <Attr Name="ImportTime" Val="1637914225"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/uart_rx.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../image_rx_tx_with_filter/image_rx_tx_with_filter.srcs/sources_1/new/uart_rx.vhd"/>
+        <Attr Name="ImportTime" Val="1637915161"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/uart_rx_for_fsm.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../fpga-telemetry-bot/components/top_level_fsm_controller/top_level_fsm_controller.srcs/sources_1/new/uart_rx_for_fsm.vhd"/>
+        <Attr Name="ImportTime" Val="1638081719"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/uart_tx.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../image_rx_tx_with_filter/image_rx_tx_with_filter.srcs/sources_1/new/uart_tx.vhd"/>
+        <Attr Name="ImportTime" Val="1637915591"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/image_rx_tx_with_filter.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../image_rx_tx_with_filter/image_rx_tx_with_filter.srcs/sources_1/new/image_rx_tx_with_filter.vhd"/>
+        <Attr Name="ImportTime" Val="1638000922"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="image_rx_tx_with_filter"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/new/zybo_z720_constraints.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../fpga-telemetry-bot/components/image_rx_tx_with_filter/image_rx_tx_with_filter.srcs/constrs_1/new/zybo_z720_constraints.xdc"/>
+        <Attr Name="ImportTime" Val="1638013555"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
