@@ -1,12 +1,12 @@
 # Directory Tree
-    - `components`: Contains all the lower level modules used
-    - `fpga_telemetry_bot_main`: The primary directory that contains the project's Vivado files. Specifically, the VHDL files can be found in the following path: `fpga_telemetry_bot_main/telemetry_bot_top/telemetry_bot_top.srcs/sources_1/new`
-    - `MATLAB Scripts`: Contains the MATLAB project files, initially used to generate the sample image matrix and view the results after the sample image has been processed by the spatial filters
-    - `raspberry_pi_web_ui`: Contains all the files for the Raspberry Pi, including the Python Flask app that serves the Web UI. The `templates` directory includes the HTML file, while the `static` directory consists of the CSS file, the input image directory, and the `image_results_for_ui` directory which is used to store the output images
-        - `app.py` is used to run the Flask application
-    - `schematics`: Contains the synthesized RTL schematic of each component
-    - `screenshots`: Contains all the image files used for the project repository
-    - `simulation_results`: Includes some simulation results of the lower-level components
+- `components`: Contains all the lower level modules used
+- `fpga_telemetry_bot_main`: The primary directory that contains the project's Vivado files. Specifically, the VHDL files can be found in the following path: `fpga_telemetry_bot_main/telemetry_bot_top/telemetry_bot_top.srcs/sources_1/new`
+- `MATLAB Scripts`: Contains the MATLAB project files, initially used to generate the sample image matrix and view the results after the sample image has been processed by the spatial filters
+- `raspberry_pi_web_ui`: Contains all the files for the Raspberry Pi, including the Python Flask app that serves the Web UI. The `templates` directory includes the HTML file, while the `static` directory consists of the CSS file, the input image directory, and the `image_results_for_ui` directory which is used to store the output images
+    - `app.py` is used to run the Flask application
+- `schematics`: Contains the synthesized RTL schematic of each component
+- `screenshots`: Contains all the image files used for the project repository
+- `simulation_results`: Includes some simulation results of the lower-level components
 
 # Description
 
