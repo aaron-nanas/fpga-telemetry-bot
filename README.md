@@ -1,22 +1,38 @@
+# Directory Tree
+    - `components`: Contains all the lower level modules used
+    - `fpga_telemetry_bot_main`: The primary directory that contains the project's Vivado files. Specifically, the VHDL files can be found in the following path: `fpga_telemetry_bot_main/telemetry_bot_top/telemetry_bot_top.srcs/sources_1/new`
+    - `MATLAB Scripts`: Contains the MATLAB project files, initially used to generate the sample image matrix and view the results after the sample image has been processed by the spatial filters
+    - `raspberry_pi_web_ui`: Contains all the files for the Raspberry Pi, including the Python Flask app that serves the Web UI. The `templates` directory includes the HTML file, while the `static` directory consists of the CSS file, the input image directory, and the `image_results_for_ui` directory which is used to store the output images
+        - `app.py` is used to run the Flask application
+    - `schematics`: Contains the synthesized RTL schematic of each component
+    - `screenshots`: Contains all the image files used for the project repository
+    - `simulation_results`: Includes some simulation results of the lower-level components
+
 # Description
 
-**Note:** Currently WIP. This project is expected to be completed in December.
-
 Implemented in VHDL, this project aims to achieve the following goals:
+
 - Establish UART between an external device (which could be a microcontroller or a processor) such as a Raspberry Pi and an FPGA/SoC board such as the Zybo Z7-20
+
 - Using the Raspberry Pi's Wi-Fi capability, a web UI is created that allows the user to send signals to the FPGA wirelessly via UART. The FPGA will then perform the associated actions according to the instructions specified by the user.
     - The Raspberry Pi will be programmed using Python. A module called `serial` will be used in order to transmit and receive UART data streams
     - The web UI is designed using HTML/CSS/Javascript, with Flask serving as the web framework
+
 - Design a motor controller that instantiates multiple instances of a PWM generator to control four DC motors. The motor controller will include features such as speed control and changing directions
-- Design a sensor controller that will interface one or two of the following sensors: (1) Temperature and Humidity, (2) 9 DoF IMU, (3) GPS, and (4) Ultrasonic Range Finder
-    - The communication protocols involved will be: I2C, SPI, or UART
+
+- Interface a servo motor that will control the position of the camera
+
+- Interface an Ultrasonic Range Finder that will display the range in inches on the Pmod Seven-Segment Display
+
 - Design a top-level FSM controller that will send signals to both the motor and the sensor controllers based on the data received via UART
+
 - Image Processing: Apply a spatial filter to an image
     - Several filters can be applied to the original image such as an averaging filter, edge detection (Laplacian of Gaussian), or a smoothing filter
-    - A camera will be connected to either the ESP32 or the Raspberry Pi and capture a still photo
+    - A camera will be connected to the Raspberry Pi and capture a still photo
     - The image matrix will be sent via UART to the FPGA and stored in a Block RAM. Then, the FPGA will process the incoming data and apply a spatial filter
     - The resulting matrix will be sent back via UART, and the output image will be compared alongside the original image
-- To remove the need of programming the FPGA each time it powers on, a Zynq Boot Image is created in order to store the bitstream and other necessary files into the Zybo Z7-20's QSPI Flash. After it boots up, the Zybo will read the contents of the QSPI Flash.
+
+- To remove the need of programming the FPGA each time it is powered on, a Zynq Boot Image is created in order to store the bitstream and other necessary files into the Zybo Z7-20's QSPI Flash. After it boots up, the Zybo will read the contents of the QSPI Flash.
 
 # Block Diagram of Design
 ![Block Diagram](./screenshots/fpga_top_level_hierarchy.png)
@@ -25,14 +41,17 @@ Implemented in VHDL, this project aims to achieve the following goals:
 | Part | QTY | Price ($) | Link |
 | --- | --- | --- | --- |
 | Zybo Z7-20 FPGA/SoC | -- | -- | --
-| FireBeetle ESP32 Microcontroller | 1 | 6.90 per unit | [Product Link](https://www.dfrobot.com/product-1590.html)
+| Raspberry Pi 4B 8GB | 1 | 75.00 per unit | [Product Link](https://www.adafruit.com/product/4564)
+| Arducam 5MP Camera | 1 | 9.99 per unit | [Product Link](https://www.amazon.com/dp/B012V1HEP4?ref=ppx_yo2_dt_b_product_details&th=1)
 | 12V 170 RPM DC Gear Motor | 4 | 15.00 per unit | [Product Link](https://www.servocity.com/170-rpm-econ-gear-motor/)
-| Dual Channel DC Motor Driver | 2 | 22.00 per unit | [Product Link](https://www.robotshop.com/en/cytron-10a-5-30v-dual-channel-dc-motor-driver.html)
+| Adafruit DRV8871 DC Motor Driver Breakout Board | 4 | 7.50 per unit | [Product Link](https://www.adafruit.com/product/3190)
+| HS-311 Servo-Stock Rotation | 1 | 13.49 per unit | [Product Link](https://www.servocity.com/hs-311-servo/)
+| Pmod MAXSONAR: Maxbotix Ultrasonic Range Finder | 1 | 25.99 per unit | [Product Link](https://digilent.com/shop/pmod-maxsonar-maxbotix-ultrasonic-range-finder/)
+| Pmod SSD: Seven-Segment Display | 1 | 6.99 per unit | [Product Link](https://digilent.com/shop/pmod-ssd-seven-segment-display/)
+| Buck Converter (5V 1.6A) | 1 | 2.90 per unit | [Product Link](https://www.dfrobot.com/product-1768.html)
 | 12V 3000mAh NiMH Battery | 1 | 35.00 per unit | [Product Link](https://www.servocity.com/nimh-battery-12v-3000mah-xt30-connector-mh-fc-20a-fuse-12-20/)
-| GPS Option 1: GPS Breakout - NEO-M9N, SMA (Qwiic) | 1 | 70.00 per unit | [Product Link](https://www.sparkfun.com/products/17285)
-| Humidity and Temperature Sensor | 1 | 10.00 per unit | [Product Link](https://www.sparkfun.com/products/13763)
-| 9DoF IMU Breakout | 1 | 17.00 per unit | [Product Link](https://www.amazon.com/SparkFun-Breakout-ICM-20948-connection-Accelerometer-Magnetometer/dp/B07VNV3WKL/)
-| 3604 Series Omni Wheel (14mm Bore, 120mm Diameter) | 4 | 9.00 per unit | [Product Link](https://www.servocity.com/3604-series-omni-wheel-14mm-bore-120mm-diameter/)
+| 5V Power Bank | 2 | 18.95 per unit | [Product Link](https://www.adafruit.com/product/4288)
+| Metal Mecanum Wheel with Motor Shaft Coupling (Left and Right) | 4 | 8.90 per unit | [Product Link](https://www.dfrobot.com/product-2301.html)
 
 # Development Tools
 * Software: Vivado
@@ -89,9 +108,16 @@ General Procedure:
 
 8. Launch the Vitis IDE. Then, select File > New > Platform Project. After the platform has been created, click on `Modify BSP Settings...` and check the box for `xilffs`, which will allow the Generic Fat File System Library to be used. This library is necessary for creating the application for the Zynq FSBL.
 
+Platform Setup:
+![Platform Setup](./screenshots/setup_xsa_file_platform.png)
+
+Configuring xilffs:
+
 ![BSP xilffs](./screenshots/board_support_package_pic.png)
 
-9. Build the platform project by right-clicking on the top-level section and selecting `Build Project`. Once it has finished building, create the application by selecting File > New > Application Project. Choose the platform previously created. Then, specify the name of the application project. 
+9. Build the platform project by right-clicking on the top-level section and selecting `Build Project`. Once it has finished building, create the application by selecting File > New > Application Project. Choose the platform previously created. Then, specify the name of the application project.
+
+![Application Setup](./screenshots/setup_telemetry_app.png)
 
 10. In the `Templates` section, choose `Zynq FSBL` from the available templates. Then hit `Finish`.
 
@@ -104,3 +130,15 @@ General Procedure:
 ![Program Flash Window](./screenshots/program_flash_step.png)
 
 13. After it has finished programming the board, turn the board's power off and set the jumper back to QSPI. Then, turn on the board. This should load the boot image from the QSPI Flash. Done!
+
+# Zynq Boot Image Block Design
+
+![Block Design](./screenshots/zynq_boot_image_block_design.png)
+
+# FPGA Resources
+
+The following figures present the FPGA resources used.
+
+![FPGA Resources 1](./screenshots/fpga_telemetry_bot_resources.png)
+
+![FPGA Resources 2](./screenshots/fpga_telemetry_bot_resources_2.png)
