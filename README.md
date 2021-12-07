@@ -19,7 +19,7 @@ Implemented in VHDL, this project aims to achieve the following goals:
 - To remove the need of programming the FPGA each time it powers on, a Zynq Boot Image is created in order to store the bitstream and other necessary files into the Zybo Z7-20's QSPI Flash. After it boots up, the Zybo will read the contents of the QSPI Flash.
 
 # Block Diagram of Design
-![Block Diagram](./screenshots/updated-fpga-telemetry-block-diagram.png)
+![Block Diagram](./screenshots/fpga_top_level_hierarchy.png)
 
 # Parts
 | Part | QTY | Price ($) | Link |
@@ -79,7 +79,7 @@ General Procedure:
 
 3. Right-click on the Block Design area and select `Add Module...`. Choose all the design sources in the project. For the I/O ports, right-click on them (can be done individually) and select `Make External`. Note that this will add a suffix to the names of your I/O, so rename the ports by removing this suffix (in our case, it was `_0` as necessary). In other words, any I/O ports must match their names as listed in the constraints file.
 
-4. Another note: for reset, if this is declared in the constraints file, manually the reset signal external, as this will be automatically connected to the ZYNQ7 Processing System's reset port.
+4. Another note: for reset, if this is declared in the constraints file, manually set the reset signal external, as this will be automatically connected to the ZYNQ7 Processing System's reset port.
 
 5. Validate the Block Diagram design and save it.
 

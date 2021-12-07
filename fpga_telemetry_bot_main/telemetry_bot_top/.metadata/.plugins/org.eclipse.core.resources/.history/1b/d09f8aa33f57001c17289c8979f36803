@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="telemetry_bot_app" location="/home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/telemetry_bot_app" platform="/home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/telemetry_bot_platform/export/telemetry_bot_platform/telemetry_bot_platform.xpfm" platformUID="xilinx:zybo-z7-20::0.0(custom)" systemProject="telemetry_bot_app_system" sysConfig="telemetry_bot_platform" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="b4d2a06f456fe3797ba560dba7a0dc7b">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1079862762">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1599599075" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="zynq_fsbl" hasBspSettings="true"/>
+</sdkproject:SdkProject>

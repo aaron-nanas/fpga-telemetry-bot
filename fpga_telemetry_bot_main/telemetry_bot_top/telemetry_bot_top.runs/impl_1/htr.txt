@@ -6,4 +6,4 @@
 # Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log image_rx_tx_with_filter.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source image_rx_tx_with_filter.tcl -notrace
+vivado -log telemetry_bot_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source telemetry_bot_wrapper.tcl -notrace

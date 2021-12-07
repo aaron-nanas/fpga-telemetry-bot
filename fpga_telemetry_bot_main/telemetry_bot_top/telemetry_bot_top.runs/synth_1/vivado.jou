@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sun Nov 28 17:00:15 2021
-# Process ID: 520443
+# Start of session at: Tue Dec  7 01:15:21 2021
+# Process ID: 843247
 # Current directory: /home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/telemetry_bot_top.runs/synth_1
-# Command line: vivado -log image_rx_tx_with_filter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source image_rx_tx_with_filter.tcl
-# Log file: /home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/telemetry_bot_top.runs/synth_1/image_rx_tx_with_filter.vds
+# Command line: vivado -log telemetry_bot_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source telemetry_bot_wrapper.tcl
+# Log file: /home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/telemetry_bot_top.runs/synth_1/telemetry_bot_wrapper.vds
 # Journal file: /home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/telemetry_bot_top.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source image_rx_tx_with_filter.tcl -notrace
+source telemetry_bot_wrapper.tcl -notrace

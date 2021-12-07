@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log image_rx_tx_with_filter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source image_rx_tx_with_filter.tcl
+EAStep vivado -log telemetry_bot_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source telemetry_bot_wrapper.tcl

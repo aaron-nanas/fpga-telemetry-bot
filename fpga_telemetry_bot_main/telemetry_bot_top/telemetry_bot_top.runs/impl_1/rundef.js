@@ -29,7 +29,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log image_rx_tx_with_filter.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source image_rx_tx_with_filter.tcl -notrace" );
+         "-log telemetry_bot_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source telemetry_bot_wrapper.tcl -notrace" );
 
 
 

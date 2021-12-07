@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"telemetry_bot": {
+			"proto_instances": {
+			}
+		}
+	}
+}

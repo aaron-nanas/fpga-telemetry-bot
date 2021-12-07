@@ -1,0 +1,38 @@
+01:17:44 INFO  : Launching XSCT server: xsct -n  -interactive /home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/temp_xsdb_launch_script.tcl
+01:17:44 INFO  : Registering command handlers for Vitis TCF services
+01:17:45 INFO  : Platform repository initialization has completed.
+01:17:46 INFO  : XSCT server has started successfully.
+01:17:46 INFO  : Successfully done setting XSCT server connection channel  
+01:17:46 INFO  : plnx-install-location is set to ''
+01:17:46 INFO  : Successfully done setting workspace for the tool. 
+01:17:46 INFO  : Successfully done query RDI_DATADIR 
+01:18:01 INFO  : Launching XSCT server: xsct -n  -interactive /home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/temp_xsdb_launch_script.tcl
+01:18:01 INFO  : Registering command handlers for Vitis TCF services
+01:18:02 INFO  : Platform repository initialization has completed.
+01:18:03 INFO  : XSCT server has started successfully.
+01:18:03 INFO  : plnx-install-location is set to ''
+01:18:03 INFO  : Successfully done setting XSCT server connection channel  
+01:18:03 INFO  : Successfully done query RDI_DATADIR 
+01:18:03 INFO  : Successfully done setting workspace for the tool. 
+01:21:53 INFO  : Result from executing command 'getProjects': telemetry_bot_platform
+01:21:53 INFO  : Result from executing command 'getPlatforms': 
+01:22:05 INFO  : Result from executing command 'getProjects': telemetry_bot_platform
+01:22:05 INFO  : Result from executing command 'getPlatforms': telemetry_bot_platform|/home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/telemetry_bot_platform/export/telemetry_bot_platform/telemetry_bot_platform.xpfm
+01:23:56 INFO  : Result from executing command 'getProjects': telemetry_bot_platform
+01:23:56 INFO  : Result from executing command 'getPlatforms': telemetry_bot_platform|/home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/telemetry_bot_platform/export/telemetry_bot_platform/telemetry_bot_platform.xpfm
+01:25:07 INFO  : Launching XSCT server: xsct -n  -interactive /home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/temp_xsdb_launch_script.tcl
+01:25:09 INFO  : Platform repository initialization has completed.
+01:25:09 INFO  : XSCT server has started successfully.
+01:25:09 INFO  : Successfully done setting XSCT server connection channel  
+01:25:09 INFO  : plnx-install-location is set to ''
+01:25:09 INFO  : Successfully done setting workspace for the tool. 
+01:25:09 INFO  : Successfully done query RDI_DATADIR 
+01:25:09 INFO  : Registering command handlers for Vitis TCF services
+01:25:27 INFO  : Checking for BSP changes to sync application flags for project 'telemetry_bot_app'...
+01:25:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file /home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/telemetry_bot_platform/export/telemetry_bot_platform/hw/telemetry_bot_wrapper.xsa is already opened
+
+01:25:46 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file /home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/telemetry_bot_platform/export/telemetry_bot_platform/hw/telemetry_bot_wrapper.xsa is already opened
+
+01:25:46 INFO  : Generated template bif file for telemetry_bot_app_system
+01:26:26 INFO  : Invoking Bootgen: bootgen -image telemetry_bot_app_system.bif -arch zynq -o /home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/telemetry_bot_app_system/_ide/bootimage/BOOT.bin
+01:26:27 INFO  : Bootgen command execution is done.

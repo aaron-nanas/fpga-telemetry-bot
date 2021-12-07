@@ -1,0 +1,7 @@
+/*telemetry_bot_platform*/
+the_ROM_image:
+{
+  [bootloader]<telemetry_bot_platform/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

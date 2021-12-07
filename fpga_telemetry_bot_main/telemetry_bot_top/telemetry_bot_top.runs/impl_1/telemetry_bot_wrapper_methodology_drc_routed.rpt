@@ -1,0 +1,726 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Tue Dec  7 01:16:41 2021
+| Host         : Aaron-Linux running 64-bit Ubuntu 20.04.3 LTS
+| Command      : report_methodology -file telemetry_bot_wrapper_methodology_drc_routed.rpt -pb telemetry_bot_wrapper_methodology_drc_routed.pb -rpx telemetry_bot_wrapper_methodology_drc_routed.rpx
+| Design       : telemetry_bot_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 138
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay | 30         |
+| TIMING-20 | Warning  | Non-clocked latch             | 108        |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on i_data_in_rx relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on i_reset relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on read_enable_input_bram relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on read_enable_output_bram relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on rx_instruction_active relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on sensor_pulse relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on write_enable_input_bram relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An input delay is missing on write_enable_output_bram relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on o_PWM_1 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on o_PWM_2 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on o_PWM_3 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on o_PWM_4 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on o_PWM_5 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An output delay is missing on o_PWM_6 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on o_PWM_7 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on o_PWM_8 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on o_led[0] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An output delay is missing on o_led[1] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An output delay is missing on o_led[2] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An output delay is missing on o_led[3] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An output delay is missing on o_ssd[0] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An output delay is missing on o_ssd[1] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An output delay is missing on o_ssd[2] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An output delay is missing on o_ssd[3] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An output delay is missing on o_ssd[4] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#26 Warning
+Missing input or output delay  
+An output delay is missing on o_ssd[5] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#27 Warning
+Missing input or output delay  
+An output delay is missing on o_ssd[6] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#28 Warning
+Missing input or output delay  
+An output delay is missing on o_ssd_cat relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#29 Warning
+Missing input or output delay  
+An output delay is missing on o_tx_serial_data relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#30 Warning
+Missing input or output delay  
+An output delay is missing on servo_PWM relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[0] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[0]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[0]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[0]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[0]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[10] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[10]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[10]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[10]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[10]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[11] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[11]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[11]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[11]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[11]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[12] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[12]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[12]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[12]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[12]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[13] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[13]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[13]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[13]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[13]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[14] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[14]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[14]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[14]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[14]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[15] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[15]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[15]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[15]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[15]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[16] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[17] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[1] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[1]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[1]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[1]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[1]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[2] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[2]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[2]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[2]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[2]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[3] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[3]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[3]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[3]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[3]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[4] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[4]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[4]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[4]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[4]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[5] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[5]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[5]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[5]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[5]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[6] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[6]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[6]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#41 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[6]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[6]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#42 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[7] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#43 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[7]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[7]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#44 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[7]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[7]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#45 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[8] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#46 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[8]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[8]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#47 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[8]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[8]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#48 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[9] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#49 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[9]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[9]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#50 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[9]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram1_a_mux_reg[9]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#51 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[0] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#52 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[0]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[0]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#53 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[0]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[0]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#54 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[10] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#55 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[10]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[10]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#56 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[10]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[10]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#57 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[11] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#58 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[11]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[11]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#59 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[11]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[11]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#60 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[12] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#61 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[12]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[12]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#62 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[12]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[12]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#63 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[13] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#64 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[13]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[13]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#65 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[13]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[13]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#66 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[14] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#67 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[14]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[14]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#68 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[14]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[14]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#69 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[15] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#70 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[15]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[15]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#71 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[15]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[15]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#72 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[16] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#73 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[17] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#74 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[1] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#75 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[1]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[1]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#76 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[1]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[1]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#77 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[2] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#78 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[2]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[2]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#79 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[2]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[2]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#80 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[3] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#81 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[3]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[3]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#82 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[3]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[3]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#83 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[4] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#84 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[4]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[4]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#85 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[4]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[4]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#86 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[5] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#87 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[5]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[5]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#88 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[5]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[5]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#89 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[6] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#90 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[6]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[6]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#91 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[6]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[6]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#92 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[7] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#93 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[7]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[7]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#94 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[7]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[7]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#95 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[8] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#96 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[8]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[8]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#97 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[8]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[8]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#98 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[9] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#99 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[9]_rep cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[9]_rep/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#100 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[9]_rep__0 cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_a_mux_reg[9]_rep__0/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#101 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[0] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#102 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[1] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#103 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[2] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#104 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[3] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#105 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[4] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#106 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[5] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#107 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[6] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#108 Warning
+Non-clocked latch  
+The latch telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[7] cannot be properly analyzed as its control pin telemetry_bot_i/top_level_controller_0/U0/image_rx_tx_with_filter_instance/top_level_filter_fsm_instance/bram2_d_mux_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+

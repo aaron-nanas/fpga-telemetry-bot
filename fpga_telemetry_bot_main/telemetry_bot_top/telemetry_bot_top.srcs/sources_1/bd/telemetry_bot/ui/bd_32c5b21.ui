@@ -1,0 +1,66 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-616,-80",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 2 -x 440 -y 60 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 2 -x 440 -y 80 -defaultsOSRD
+preplace port sensor_pulse -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
+preplace port i_reset -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
+preplace port i_data_in_rx -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
+preplace port write_enable_input_bram -pg 1 -lvl 0 -x 0 -y 370 -defaultsOSRD
+preplace port read_enable_input_bram -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
+preplace port write_enable_output_bram -pg 1 -lvl 0 -x 0 -y 410 -defaultsOSRD
+preplace port read_enable_output_bram -pg 1 -lvl 0 -x 0 -y 430 -defaultsOSRD
+preplace port rx_instruction_active -pg 1 -lvl 0 -x 0 -y 450 -defaultsOSRD
+preplace port sensor_enable -pg 1 -lvl 2 -x 440 -y 260 -defaultsOSRD
+preplace port o_tx_serial_data -pg 1 -lvl 2 -x 440 -y 280 -defaultsOSRD
+preplace port o_PWM_1 -pg 1 -lvl 2 -x 440 -y 300 -defaultsOSRD
+preplace port o_PWM_2 -pg 1 -lvl 2 -x 440 -y 320 -defaultsOSRD
+preplace port o_PWM_3 -pg 1 -lvl 2 -x 440 -y 340 -defaultsOSRD
+preplace port o_PWM_4 -pg 1 -lvl 2 -x 440 -y 360 -defaultsOSRD
+preplace port o_PWM_5 -pg 1 -lvl 2 -x 440 -y 380 -defaultsOSRD
+preplace port o_PWM_6 -pg 1 -lvl 2 -x 440 -y 400 -defaultsOSRD
+preplace port o_PWM_7 -pg 1 -lvl 2 -x 440 -y 420 -defaultsOSRD
+preplace port o_PWM_8 -pg 1 -lvl 2 -x 440 -y 440 -defaultsOSRD
+preplace port servo_PWM -pg 1 -lvl 2 -x 440 -y 460 -defaultsOSRD
+preplace port o_ssd_cat -pg 1 -lvl 2 -x 440 -y 500 -defaultsOSRD
+preplace portBus o_ssd -pg 1 -lvl 2 -x 440 -y 480 -defaultsOSRD
+preplace portBus o_led -pg 1 -lvl 2 -x 440 -y 520 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 220 -y 100 -defaultsOSRD
+preplace inst top_level_controller_0 -pg 1 -lvl 1 -x 220 -y 390 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 200 420
+preplace netloc sensor_pulse_0_1 1 0 1 NJ 470
+preplace netloc i_reset_0_1 1 0 1 NJ 330
+preplace netloc i_data_in_rx_0_1 1 0 1 NJ 350
+preplace netloc write_enable_input_bram_0_1 1 0 1 NJ 370
+preplace netloc read_enable_input_bram_0_1 1 0 1 NJ 390
+preplace netloc write_enable_output_bram_0_1 1 0 1 NJ 410
+preplace netloc read_enable_output_bram_0_1 1 0 1 NJ 430
+preplace netloc rx_instruction_active_0_1 1 0 1 NJ 450
+preplace netloc top_level_controller_0_sensor_enable 1 1 1 NJ 260
+preplace netloc top_level_controller_0_o_tx_serial_data 1 1 1 NJ 280
+preplace netloc top_level_controller_0_o_PWM_1 1 1 1 NJ 300
+preplace netloc top_level_controller_0_o_PWM_2 1 1 1 NJ 320
+preplace netloc top_level_controller_0_o_PWM_3 1 1 1 NJ 340
+preplace netloc top_level_controller_0_o_PWM_4 1 1 1 NJ 360
+preplace netloc top_level_controller_0_o_PWM_5 1 1 1 NJ 380
+preplace netloc top_level_controller_0_o_PWM_6 1 1 1 NJ 400
+preplace netloc top_level_controller_0_o_PWM_7 1 1 1 NJ 420
+preplace netloc top_level_controller_0_o_PWM_8 1 1 1 NJ 440
+preplace netloc top_level_controller_0_servo_PWM 1 1 1 NJ 460
+preplace netloc top_level_controller_0_o_ssd 1 1 1 NJ 480
+preplace netloc top_level_controller_0_o_ssd_cat 1 1 1 NJ 500
+preplace netloc top_level_controller_0_o_led 1 1 1 NJ 520
+preplace netloc processing_system7_0_DDR 1 1 1 NJ 60
+preplace netloc processing_system7_0_FIXED_IO 1 1 1 NJ 80
+levelinfo -pg 1 0 220 440
+pagesize -pg 1 -db -bbox -sgen -240 0 610 580
+"
+}
+{
+   "da_clkrst_cnt":"1",
+   "da_ps7_cnt":"1"
+}

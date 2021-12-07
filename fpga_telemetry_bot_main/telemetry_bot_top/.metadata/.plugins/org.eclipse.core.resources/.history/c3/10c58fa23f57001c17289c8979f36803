@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<systemproject:SystemProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdsproject="http://www.xilinx.com/sdsproject" xmlns:systemproject="http://www.xilinx.com/systemproject" name="telemetry_bot_app_system" platform="/home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/telemetry_bot_platform/export/telemetry_bot_platform/telemetry_bot_platform.xpfm" platformUID="xilinx:zybo-z7-20::0.0(custom)" sysConfig="telemetry_bot_platform" runtime="C/C++" rootFSLocation="" linuxImage="" sysroot="">
+  <configuration name="Debug" id="com.xilinx.sdx.system.managedbuilder.debugConfiguration.1204135199">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="telemetry_bot_app" domainName="standalone_domain" domainPrettyName="standalone on ps7_cortexa9_0" appBuildConfig="Debug"/>
+      <options xsi:type="sdsproject:Option" gensdcard="true" dmclkid="0"/>
+    </configBuildOptions>
+  </configuration>
+  <configuration name="Release" id="com.xilinx.sdx.system.managedbuilder.releaseConfiguration.946081125">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="telemetry_bot_app" domainName="standalone_domain" domainPrettyName="standalone on ps7_cortexa9_0" appBuildConfig="Release"/>
+      <options xsi:type="sdsproject:Option" gensdcard="true" dmclkid="0"/>
+    </configBuildOptions>
+  </configuration>
+</systemproject:SystemProject>

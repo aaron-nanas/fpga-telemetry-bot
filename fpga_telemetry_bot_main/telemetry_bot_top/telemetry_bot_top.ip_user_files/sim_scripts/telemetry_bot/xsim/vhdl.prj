@@ -1,0 +1,6 @@
+vhdl xil_defaultlib  \
+"../../../bd/telemetry_bot/ip/telemetry_bot_processing_system7_0_0/telemetry_bot_processing_system7_0_0_sim_netlist.vhdl" \
+"../../../bd/telemetry_bot/ip/telemetry_bot_top_level_controller_0_0/sim/telemetry_bot_top_level_controller_0_0.vhd" \
+"../../../bd/telemetry_bot/sim/telemetry_bot.vhd" \
+
+nosort

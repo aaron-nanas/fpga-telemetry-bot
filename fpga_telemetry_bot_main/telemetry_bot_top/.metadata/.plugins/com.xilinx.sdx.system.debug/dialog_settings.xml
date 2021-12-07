@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="telemetry_bot_app_system-imgFile" value="/home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/telemetry_bot_app_system/_ide/bootimage/BOOT.bin"/>
+	<item key="telemetry_bot_app_system-offSet" value=""/>
+	<item key="telemetry_bot_app_system-initFile" value="/home/aaronnanas/vivado_projects/ece524_final_proj/telemetry_bot_top/telemetry_bot_platform/export/telemetry_bot_platform/sw/telemetry_bot_platform/boot/fsbl.elf"/>
+	<item key="telemetry_bot_app_system-flashType" value="qspi-x4-single"/>
+	<item key="telemetry_bot_app_system-verifyFlash" value="false"/>
+	<item key="telemetry_bot_app_system-blankCheck" value="false"/>
+	<item key="telemetry_bot_app_system-device" value="Auto Detect"/>
+	<item key="telemetry_bot_app_system-target" value="Local"/>
+	<item key="programflash.hwplatform" value="telemetry_bot_app_system"/>
+</section>
