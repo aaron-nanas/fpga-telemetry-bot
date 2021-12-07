@@ -37,10 +37,13 @@ Implemented in VHDL, this project aims to achieve the following goals:
 # Block Diagram of Design
 ![Block Diagram](./screenshots/fpga_top_level_hierarchy.png)
 
+# General Communication Diagram
+![Communication Block Diagram](./screenshots/communication_block_diagram.png)
+
 # Parts
 | Part | QTY | Price ($) | Link |
 | --- | --- | --- | --- |
-| Zybo Z7-20 FPGA/SoC | -- | -- | --
+| Zybo Z7-20 FPGA/SoC | 1 | 299.00 per unit | [Product Link](https://digilent.com/shop/zybo-z7-zynq-7000-arm-fpga-soc-development-board/)
 | Raspberry Pi 4B 8GB | 1 | 75.00 per unit | [Product Link](https://www.adafruit.com/product/4564)
 | Arducam 5MP Camera | 1 | 9.99 per unit | [Product Link](https://www.amazon.com/dp/B012V1HEP4?ref=ppx_yo2_dt_b_product_details&th=1)
 | 12V 170 RPM DC Gear Motor | 4 | 15.00 per unit | [Product Link](https://www.servocity.com/170-rpm-econ-gear-motor/)
@@ -120,6 +123,8 @@ Configuring xilffs:
 ![Application Setup](./screenshots/setup_telemetry_app.png)
 
 10. In the `Templates` section, choose `Zynq FSBL` from the available templates. Then hit `Finish`.
+
+![Zynq FSBL Template](./screenshots/setup_zynq_fsbl_app.png)
 
 11. Make sure that the app system is highlighted. Then, to create the boot image: select Xilinx > Create Boot Image. For Vitis IDE under Vivado 2020.2, the output paths for the `.bif` and `.bin` files are automatically selected. Moreover, the bootloader and the bitstream file should already be added under the `Boot image partitions` pane. If not, add these manually. Press `Create Image` when done.
 
