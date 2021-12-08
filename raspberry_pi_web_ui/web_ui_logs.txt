@@ -1,61 +1,9 @@
-[2021-11-28 17:39:56.000485] [WARNING]  * Debugger is active!
-[2021-11-28 17:39:56.000487] [INFO]  * Debugger PIN: 191-221-166
-[2021-11-28 17:40:06.000778] [INFO] GET
-[2021-11-28 17:40:06.000779] [INFO] No Post Back Call
-[2021-11-28 17:40:06.000807] [INFO] 127.0.0.1 - - [28/Nov/2021 17:40:06] "[37mGET / HTTP/1.1[0m" 200 -
-[2021-11-28 17:40:06.000876] [INFO] 127.0.0.1 - - [28/Nov/2021 17:40:06] "[33mGET /static/input_image_result.jpg HTTP/1.1[0m" 404 -
-[2021-11-28 17:40:06.000896] [INFO] 127.0.0.1 - - [28/Nov/2021 17:40:06] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
-[2021-11-28 17:40:06.000916] [INFO] 127.0.0.1 - - [28/Nov/2021 17:40:06] "[33mGET /static/output_filtered_image_result.jpg HTTP/1.1[0m" 404 -
-[2021-11-28 17:40:08.000616] [INFO] GET
-[2021-11-28 17:40:08.000616] [INFO] No Post Back Call
-[2021-11-28 17:40:08.000624] [INFO] 127.0.0.1 - - [28/Nov/2021 17:40:08] "[37mGET / HTTP/1.1[0m" 200 -
-[2021-11-28 17:40:08.000693] [INFO] 127.0.0.1 - - [28/Nov/2021 17:40:08] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
-[2021-11-28 17:40:08.000697] [INFO] 127.0.0.1 - - [28/Nov/2021 17:40:08] "[33mGET /static/input_image_result.jpg HTTP/1.1[0m" 404 -
-[2021-11-28 17:40:08.000729] [INFO] 127.0.0.1 - - [28/Nov/2021 17:40:08] "[33mGET /static/output_filtered_image_result.jpg HTTP/1.1[0m" 404 -
-[2021-11-28 17:40:13.000884] [INFO] POST
-[2021-11-28 17:40:13.000889] [INFO] Applying Spatial Filter to Image...
-[2021-11-28 17:40:13.000889] [INFO] Selected Filter: Laplacian Edge Detection Filter
-[2021-11-28 17:40:13.000890] [INFO] Restarting Serial Port
-[2021-11-28 17:40:13.000891] [INFO] Opening Serial Port
-[2021-11-28 17:40:13.000892] [INFO] Setting Up Transmission of Image Matrix...
-[2021-11-28 17:40:14.000045] [INFO] Input Image Matrix: 
-[[  0   0   0 ...   0   0   0]
- [  0 205 207 ... 185 184   0]
- [  0 204 206 ... 186 184   0]
- ...
- [  0 251 250 ... 225 224   0]
- [  0 255 255 ... 227 227   0]
- [  0   0   0 ...   0   0   0]]
-[2021-11-28 17:40:14.000046] [INFO] Number of Arrays: 402
-[2021-11-28 17:40:14.000047] [INFO] Number of Elements in An Array: 602
-[2021-11-28 17:40:14.000047] [INFO] Resetting FPGA
-[2021-11-28 17:40:14.000048] [INFO] FPGA Reset Done
-[2021-11-28 17:40:14.000049] [INFO] Write Enable Input BRAM Status: 1
-[2021-11-28 17:40:14.000049] [INFO] Read Enable Input BRAM Status: 1
-[2021-11-28 17:40:14.000050] [INFO] Write Enable Output BRAM Status: 0
-[2021-11-28 17:40:14.000051] [INFO] Read Enable Output BRAM Status: 0
-[2021-11-28 17:40:14.000052] [INFO] Transmitting Image Matrix from Raspberry Pi to FPGA's Input BRAM...
-[2021-11-28 17:40:32.000048] [INFO] Image Matrix Has Been Sent to the FPGA
-[2021-11-28 17:40:32.000049] [INFO] Elapsed Time: 17.995203614000275
-[2021-11-28 17:40:32.000049] [INFO] Starting Filter Process
-[2021-11-28 17:40:32.000049] [INFO] Start of Rx Instruction
-[2021-11-28 17:40:32.000050] [INFO] Instruction Sent to FPGA
-[2021-11-28 17:40:34.000052] [INFO] Reading Data from FPGA Output BRAM
-[2021-11-28 17:40:34.000053] [INFO] Write Enable Input BRAM Status: 0
-[2021-11-28 17:40:34.000054] [INFO] Read Enable Input BRAM Status: 0
-[2021-11-28 17:40:34.000054] [INFO] Write Enable Output BRAM Status: 0
-[2021-11-28 17:40:34.000055] [INFO] Read Enable Output BRAM Status: 1
-[2021-11-28 17:40:46.000158] [INFO] Transmission of Data from Raspberry Pi to FPGA Done!
-[2021-11-28 17:40:46.000159] [INFO] Elapsed Time: 17.995203614000275
-[2021-11-28 17:40:46.000159] [INFO] Write Enable Input BRAM Status: 0
-[2021-11-28 17:40:46.000159] [INFO] Read Enable Input BRAM Status: 0
-[2021-11-28 17:40:46.000160] [INFO] Write Enable Output BRAM Status: 0
-[2021-11-28 17:40:46.000160] [INFO] Read Enable Output BRAM Status: 0
-[2021-11-28 17:40:46.000161] [INFO] Spatial Filter Has Been Applied!
-[2021-11-28 17:40:46.000161] [INFO] Reading Input and Output Images...
-[2021-11-28 17:40:46.000161] [INFO] Saving Images...
-[2021-11-28 17:40:46.000695] [INFO] Input and Output Images Ready!
-[2021-11-28 17:40:46.000697] [INFO] 127.0.0.1 - - [28/Nov/2021 17:40:46] "[37mPOST / HTTP/1.1[0m" 200 -
-[2021-11-28 17:40:46.000753] [INFO] 127.0.0.1 - - [28/Nov/2021 17:40:46] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
-[2021-11-28 17:40:46.000803] [INFO] 127.0.0.1 - - [28/Nov/2021 17:40:46] "[37mGET /static/input_image_result.jpg HTTP/1.1[0m" 200 -
-[2021-11-28 17:40:46.000829] [INFO] 127.0.0.1 - - [28/Nov/2021 17:40:46] "[37mGET /static/output_filtered_image_result.jpg HTTP/1.1[0m" 200 -
+[2021-12-08 05:18:58.000601] [WARNING]  * Debugger is active!
+[2021-12-08 05:18:58.000602] [INFO]  * Debugger PIN: 191-221-166
+[2021-12-08 05:18:59.000056] [INFO] GET
+[2021-12-08 05:18:59.000057] [INFO] No Post Back Call
+[2021-12-08 05:18:59.000075] [INFO] 127.0.0.1 - - [08/Dec/2021 05:18:59] "[37mGET / HTTP/1.1[0m" 200 -
+[2021-12-08 05:18:59.000154] [INFO] 127.0.0.1 - - [08/Dec/2021 05:18:59] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+[2021-12-08 05:18:59.000157] [INFO] 127.0.0.1 - - [08/Dec/2021 05:18:59] "[37mGET /static/refresh-svgrepo-com.svg HTTP/1.1[0m" 200 -
+[2021-12-08 05:18:59.000194] [INFO] 127.0.0.1 - - [08/Dec/2021 05:18:59] "[33mGET /static/output_filtered_image_result.jpg HTTP/1.1[0m" 404 -
+[2021-12-08 05:18:59.000198] [INFO] 127.0.0.1 - - [08/Dec/2021 05:18:59] "[33mGET /static/input_image_result.jpg HTTP/1.1[0m" 404 -

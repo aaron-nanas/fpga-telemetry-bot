@@ -8,6 +8,12 @@
 - `screenshots`: Contains all the image files used for the project repository
 - `simulation_results`: Includes some simulation results of the lower-level components
 
+# FPGA Telemetry Robot
+
+![Robot Picture 1](./screenshots/bot_pictures/IMG_0190.JPG)
+
+![Robot Picture 2](./screenshots/bot_pictures/IMG_0196.JPG)
+
 # Description
 
 Implemented in VHDL, this project aims to achieve the following goals:
@@ -38,7 +44,7 @@ Implemented in VHDL, this project aims to achieve the following goals:
 ![Block Diagram](./screenshots/fpga_top_level_hierarchy.png)
 
 # General Communication Diagram
-![Communication Block Diagram](./screenshots/communication_block_diagram.png)
+![Communication Block Diagram](./screenshots/communication_block_diagram_1.png)
 
 # Parts
 | Part | QTY | Price ($) | Link |
@@ -53,8 +59,24 @@ Implemented in VHDL, this project aims to achieve the following goals:
 | Pmod SSD: Seven-Segment Display | 1 | 6.99 per unit | [Product Link](https://digilent.com/shop/pmod-ssd-seven-segment-display/)
 | Buck Converter (5V 1.6A) | 1 | 2.90 per unit | [Product Link](https://www.dfrobot.com/product-1768.html)
 | 12V 3000mAh NiMH Battery | 1 | 35.00 per unit | [Product Link](https://www.servocity.com/nimh-battery-12v-3000mah-xt30-connector-mh-fc-20a-fuse-12-20/)
-| 5V Power Bank | 2 | 18.95 per unit | [Product Link](https://www.adafruit.com/product/4288)
+| 5V Power Bank | 1 | 18.95 per unit | [Product Link](https://www.adafruit.com/product/4288)
 | Metal Mecanum Wheel with Motor Shaft Coupling (Left and Right) | 4 | 8.90 per unit | [Product Link](https://www.dfrobot.com/product-2301.html)
+
+# Mecanum Wheels Chart
+The following reference was used to determine the drive directions of the robot.
+
+For reference, the register that determines the motor direction and the PWM enable signals consists of the following decimal values based on the specified directions:
+
+- Move Forward: 63
+- Move Backward: 207
+- Move Left: 175
+- Move Right: 95
+- Move Diagonal Backward-Left: 201
+- Move Diagonal Backward-Right: 198
+- Move Diagonal Forward-Left: 54
+- Move Diagonal Forward-Right: 57
+
+![Mecanum Wheels Chart](./screenshots/mecanum_wheels_chart.png)
 
 # Development Tools
 * Software: Vivado

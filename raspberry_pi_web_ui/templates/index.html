@@ -7,33 +7,82 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 </head>
 <body>
 
 <h1>FPGA Telemetry Bot Control Web UI</h1>
-<p>Select a tab to control the robot:</p>
+<a href="javascript:document.location.reload();" ONMOUSEOVER="window.status='Refresh'; return true" ONMOUSEOUT="window.status='Refreshed'"> <img src="static/refresh-svgrepo-com.svg" width="115" height="31"/></a>
+<h4>Select a tab to control the robot:</h4>
 
 <div class="container">
   <ul class="nav nav-tabs nav-justified">
-    <li class="active"><a data-toggle="tab" href="#robot-drive-menu">Drive Control Menu</a></li>
+    <li class="active"><a data-toggle="tab" href="#about-page">About the Project</a></li>
+    <li><a data-toggle="tab" href="#robot-drive-menu">Drive Control Menu</a></li>
+    <li><a data-toggle="tab" href="#servo-camera-menu">Servo Camera Control Menu</a></li>
     <li><a data-toggle="tab" href="#image-processing-menu">Image Processing</a></li>
     <li><a data-toggle="tab" href="#uart-test-menu">Test UART Tx/Rx</a></li>
-    <li><a data-toggle="tab" href="#about-page">About the Project</a></li>
   </ul>
 
   <div class="tab-content">
+    <div id="about-page" class="tab-pane fade in active">
+      <h3>FPGA Telemetry Bot</h3>
+      <h4>ECE 524 and ECE 551 Final Project</h4>
+      <h4>Aaron Nanas and Jose Martinez</h4>
+      <h4>Professor: Dr. Shahnam Mirzaei</h4>
+      <h4>California State University, Northridge</h4>
+      <h4>Electrical and Computer Engineering</h4>
+    </div>
+    
     <div id="robot-drive-menu" class="tab-pane fade">
       <h2>Drive Control Menu</h2>
       <p>Press the buttons below to drive the robot:</p>
       <form method="post" action="/#robot-drive-menu">
         <input type="submit" class="button" name="Forward" value="Forward"></button>
         <input type="submit" class="button" name="Backward" value="Backward"></button>
+        <br>
+        <input type="submit" class="button" name="Left" value="Left" style="margin-top:20px;"></button>
+        <input type="submit" class="button" name="Right" value="Right" style="margin-top:20px;"></button>
+        <br>
+        <input type="submit" class="button" name="Diagonal Forward Left" value="Diagonal Forward Left" style="margin-top:20px;"></button>
+        <input type="submit" class="button" name="Diagonal Forward Right" value="Diagonal Forward Right" style="margin-top:20px;"></button>
+        <br>
+        <input type="submit" class="button" name="Diagonal Backward Left" value="Diagonal Backward Left" style="margin-top:20px;"></button>
+        <input type="submit" class="button" name="Diagonal Backward Right" value="Diagonal Backward Right" style="margin-top:20px;"></button>
+        <br>
+        <input type="submit" class="button" name="Spin Counter-Clockwise" value="Spin Counter-Clockwise" style="margin-top:20px;"></button>
+        <input type="submit" class="button" name="Spin Clockwise" value="Spin Clockwise" style="margin-top:20px;"></button>
+        <br>
+        <input type="submit" class="button" name="Square Pattern" value="Square Pattern" style="margin-top:20px;"></button>
+        <input type="submit" class="button" name="All Directions" value="All Directions" style="margin-top:20px;"></button>
+        <br>
+        <input type="submit" class="button" style="background-color: #971b1b; margin-top:20px;" name="Stop Motors" value="Stop Motors"></button>
+        <h3>Speed Control</h3>
+        <input type="range" id="speed_range" class="slider" min="1" max="255" step="1" name="motor_speed_slider" value="220" style="display: inline-block; width:200px; margin-top:10px;">
+        <p>Value: <span id="speed_value"></span></p>
+        <h3>Reset the FPGA:</h3>
+        <input type="submit" class="button" style="background-color: #971b1b;" name="Reset FPGA" value="Reset FPGA"></button>
+      </form> 
+    </div>
+
+    <div id="servo-camera-menu" class="tab-pane fade">
+      <h2>Servo Camera Control Menu</h2>
+      <p>Press the buttons below to control the servo attached to the camera:</p>
+      <form method="post" action="/#servo-camera-menu">
+        <input type="submit" class="button" name="Move Camera Left" value="Move Camera Left"></button>
+        <input type="submit" class="button" name="Move Camera Right" value="Move Camera Right"></button>
+        <input type="submit" class="button" name="Move Camera 180 Degrees" value="Move Camera 180 Degrees"></button>
+        <input type="submit" class="button" style="background-color: #971b1b;" name="Reset Position" value="Reset Position"></button>
+        <h3>Reset the FPGA:</h3>
+        <input type="submit" class="button" style="background-color: #971b1b;" name="Reset FPGA" value="Reset FPGA"></button>
       </form> 
     </div>
 
     <div id="image-processing-menu" class="tab-pane fade">
       <h2>Spatial Filter Menu</h2>
       <p>This section contains the controls for applying a spatial filter to an image.</p>
+
       <h3>Select a filter to apply:</h3>
       <form method="POST" action="/#image-processing-menu">
       <select class="image-filter" name="image-filter" style="text-align: center;">
@@ -43,10 +92,23 @@
         <option value="Threshold">Threshold</option>
         <option value="Image Inversion">Image Inversion</option>
       </select>
+
+      <h3>Camera Mode</h3>
+      <label class="switch">
+        <input name="camera-trigger-switch" id="camera-trigger-switch" type="checkbox">
+        <div class="slider_for_mode"></div>
+      </label>
+      <p name="return mode status" id="return mode status"></p>
+      
+      <h3>Select Threshold Value:</h3>
+      <input type="range" id="range" class="slider" min="1" max="255" step="1" name="threshold_slider" value="150" style="display: inline-block; width:200px; margin-top:10px;">
+      <p>Value: <span id="value"></span></p>
+
       <h3>Current Selected Spatial Filter: </h3>
       <p name="return image spatial filter" id = "return image spatial filter"></p>
         <input type="submit" class="button" name="Apply Spatial Filter" value="Apply Spatial Filter"></button>
       </form>
+
       <h2>Applied Spatial Filter:</h2>
       <h3>{{ applied_filter }}</h3>
       <div class="flexbox-container" style="display:flex; margin-bottom: 50px;">
@@ -76,11 +138,6 @@
         <input type="submit" class="button" style="background-color: #971b1b;" name="Stop Data Transmission" value="Stop Data Transmission"></button>
       </form>
       </div>
-
-    <div id="about-page" class="tab-pane fade">
-      <h3>FPGA Telemetry Bot Description</h3>
-      <p>This section contains the description for the FPGA Telemetry Bot project.</p>
-    </div>
   </div>
 </div>
 <script>
@@ -92,6 +149,24 @@ function toggle_push_button(input_from_pushbutton)
   http_request_data.send();
 }
 /***** End of Button Section *****/
+
+/***** Start of Slider Section *****/
+var slider = document.getElementById("range");
+var output = document.getElementById("value");
+var outputVarNo = document.getElementById("outputVar");
+
+var slider2 = document.getElementById("speed_range");
+var output2 = document.getElementById("speed_value");
+var outputVarNo2 = document.getElementById("outputVar2");
+
+let update = () => output.innerHTML = slider.value;
+let update_speed = () => output2.innerHTML = slider2.value;
+
+slider.addEventListener('input', update);
+slider2.addEventListener('input', update_speed);
+update();
+update_speed();
+/***** End of Slider Section *****/
 
 /***** Start of Drop-Down Menu Section *****/
 function drop_down_event_listener()
@@ -105,6 +180,34 @@ function drop_down_event_listener()
   });
 }
 
+/***** Start of Slider Switch Section *****/
+let camera_mode_status = false;
+let device_mode_status = document.getElementById('return mode status');
+device_mode_status.textContent = `Camera Trigger Status: false`;
+
+function read_switch_mode(event)
+{
+  var switch_element = event.currentTarget
+
+  if (switch_element.id == "camera-trigger-switch")
+  {
+    if (switch_element.checked)
+    {
+      camera_mode_status = true;
+      console.log("Camera Mode Status:", camera_mode_status);
+      device_mode_status.textContent = `Camera Trigger Status: ${camera_mode_status}`;
+    }
+    else
+    {
+      camera_mode_status = false;
+      console.log("Camera Mode Status:", camera_mode_status);
+      device_mode_status.textContent = `Camera Trigger Status: ${camera_mode_status}`;
+    }
+  }
+}
+document.getElementById("camera-trigger-switch").addEventListener("change", read_switch_mode);
+/***** End of Slider Switch Section *****/
+
   $(document).ready(function(){
     var anchorHash = window.location.href.toString();
     if( anchorHash.lastIndexOf('#') != -1 ) {
@@ -114,6 +217,7 @@ function drop_down_event_listener()
         }
     }
 });
+
   drop_down_event_listener();
 </script>
    

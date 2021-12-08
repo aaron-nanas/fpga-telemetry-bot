@@ -79,6 +79,6 @@ if __name__ == "__main__":
 
         img_array = np.asarray(output_image_list)
         reshaped_img_array = img_array.reshape(400, 600)
-        plt.imshow(reshaped_img_array, cmap='gray')
+        plt.imshow(reshaped_img_array, cmap='gray', interpolation="none")
         plt.title("Output Image After Reading from BRAM")
         plt.show()
