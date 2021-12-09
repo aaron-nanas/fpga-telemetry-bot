@@ -1,3 +1,10 @@
+# Video Demonstration
+
+- Motor Control Demo 1: [Link](https://youtu.be/540THuUPZNw)
+- Motor Control Demo 2: [Link](https://youtu.be/U0wplMGsGOc)
+- Configurable Spatial Filter Demo: [Link](https://youtu.be/6viqpgEumvo)
+- Distance Sensor Demo: [Link](https://youtu.be/YtzdvDTfId4)
+
 # Directory Tree
 - `components`: Contains all the lower level modules used
 - `fpga_telemetry_bot_main`: The primary directory that contains the project's Vivado files. Specifically, the VHDL files can be found in the following path: `fpga_telemetry_bot_main/telemetry_bot_top/telemetry_bot_top.srcs/sources_1/new`
