@@ -162,10 +162,6 @@ The following figures present the control menu of the Web UI.
 * Languages: VHDL, Python, MATLAB, HTML/CSS/Javascript
 * Development Board Used: Zybo Z7-20, Raspberry Pi
 
-# Contributors
-* Jose Martinez
-* Aaron Nanas
-
 # References
 ## General Design Ideas
 - [OpenCores](https://opencores.org/projects)
