@@ -1,3 +1,29 @@
+# Introduction
+This project fulfills the final project requirement for the following classes at California State University, Northridge (CSUN):
+- ECE 524: FPGA/ASIC Design and Optimization Using VHDL
+- ECE 551: Image Processing
+
+Performed By:
+- Aaron Nanas
+- Jose Martinez
+
+Professor:
+- Dr. Shahnam Mirzaei
+
+# Project Goals
+- Gain experience in designing a system that implements specific co-dependent tasks using both hardware and software
+    - The software will provide data to the FPGA
+    - The FPGA will process the data received from software
+
+- Explore how to interface external devices or modules to an FPGA
+    - Topics of Interest:
+        - What communication protocols are involved?
+        - How fast can a set of data be transmitted and received?
+        - How should the external peripherals interact?
+
+- Determine a way of providing some form of wireless commnication to the FPGA
+    - Create a user interface using front-end development tools
+
 # Video Demonstration
 
 - Motor Control Demo 1: [Link](https://youtu.be/540THuUPZNw)
@@ -6,7 +32,7 @@
 - Distance Sensor Demo: [Link](https://youtu.be/YtzdvDTfId4)
 
 # Directory Tree
-- `components`: Contains all the lower level modules used
+- `components`: Contains all the lower level components used
 - `fpga_telemetry_bot_main`: The primary directory that contains the project's Vivado files. Specifically, the VHDL files can be found in the following path: `fpga_telemetry_bot_main/telemetry_bot_top/telemetry_bot_top.srcs/sources_1/new`
 - `MATLAB Scripts`: Contains the MATLAB project files, initially used to generate the sample image matrix and view the results after the sample image has been processed by the spatial filters
 - `raspberry_pi_web_ui`: Contains all the files for the Raspberry Pi, including the Python Flask app that serves the Web UI. The `templates` directory includes the HTML file, while the `static` directory consists of the CSS file, the input image directory, and the `image_results_for_ui` directory which is used to store the output images
@@ -21,37 +47,41 @@
 
 ![Robot Picture 2](./screenshots/bot_pictures/IMG_0196.JPG)
 
-# Description
+# Project Description
 
-Implemented in VHDL, this project aims to achieve the following goals:
+Implemented in VHDL, this project has achieved the following goals:
 
-- Establish UART between an external device (which could be a microcontroller or a processor) such as a Raspberry Pi and an FPGA/SoC board such as the Zybo Z7-20
+- Established UART between an external device (which could be a microcontroller or a processor) such as a Raspberry Pi and an FPGA/SoC board such as the Zybo Z7-20
 
-- Using the Raspberry Pi's Wi-Fi capability, a web UI is created that allows the user to send signals to the FPGA wirelessly via UART. The FPGA will then perform the associated actions according to the instructions specified by the user.
-    - The Raspberry Pi will be programmed using Python. A module called `serial` will be used in order to transmit and receive UART data streams
+- Using the Raspberry Pi's Wi-Fi capability, a web UI is created that allows the user to send signals to the FPGA wirelessly via UART. The FPGA then performs the associated actions according to the instructions specified by the user
+    - Flask is used as the web framework
+    - A Flask app implemented in Python is run from the Raspberry Pi. A module called `serial` is used in order to transmit and receive data streams via UART, with a baud rate of 921600
     - The web UI is designed using HTML/CSS/Javascript, with Flask serving as the web framework
 
-- Design a motor controller that instantiates multiple instances of a PWM generator to control four DC motors. The motor controller will include features such as speed control and changing directions
+- Designed a motor controller that instantiates multiple instances of a PWM generator to control four DC motors. The motor controller includes features such as speed control and changing directions
 
-- Interface a servo motor that will control the position of the camera
+- Interfaced a servo motor that controls the horizontal position of the camera
 
-- Interface an Ultrasonic Range Finder that will display the range in inches on the Pmod Seven-Segment Display
+- Interfaced an Ultrasonic Range Finder that displays the range in inches on the Pmod Seven-Segment Display
 
-- Design a top-level FSM controller that will send signals to both the motor and the sensor controllers based on the data received via UART
+- Designed a top-level FSM controller that sends signals to both the motor and the sensor controllers based on the data received via UART
 
-- Image Processing: Apply a spatial filter to an image
-    - Several filters can be applied to the original image such as an averaging filter, edge detection (Laplacian of Gaussian), or a smoothing filter
-    - A camera will be connected to the Raspberry Pi and capture a still photo
-    - The image matrix will be sent via UART to the FPGA and stored in a Block RAM. Then, the FPGA will process the incoming data and apply a spatial filter
-    - The resulting matrix will be sent back via UART, and the output image will be compared alongside the original image
+- Image Processing: Applies a spatial filter to an image
+    - The implemented filters are the following: Average Filter, Edge Detection (Laplacian), Image Inversion, and Threshold (Binary)
+    - A camera is connected to the Raspberry Pi and captures a still photo
+    - First, the image is padded with zeros and is converted to grayscale, so each pixel is an 8-bit value ranging from 0 to 255. Then, the image matrix is sent via UART to the FPGA and stored in the Input Block RAM. The FPGA then applies a spatial filter and stores the output values to the Output Block RAM, and the processed image is transmitted to the Raspberry Pi. For this implementation, a total of 128 BRAM in the FPGA have been used.
+    - The output image is then compared alongside the input image on the Web UI
 
-- To remove the need of programming the FPGA each time it is powered on, a Zynq Boot Image is created in order to store the bitstream and other necessary files into the Zybo Z7-20's QSPI Flash. After it boots up, the Zybo will read the contents of the QSPI Flash.
+- To remove the need of programming the FPGA each time it is powered on, a Zynq Boot Image is created in order to store the bitstream and other necessary files into the Zybo Z7-20's QSPI Flash. After it boots up, the Zybo will read the contents of the QSPI Flash
 
 # Block Diagram of Design
 ![Block Diagram](./screenshots/fpga_top_level_hierarchy.png)
 
 # General Communication Diagram
 ![Communication Block Diagram](./screenshots/communication_block_diagram_1.png)
+
+# Block Design for Zynq Boot Image
+![Zynq Block Design](./screenshots/zynq_boot_image_block_design.png)
 
 # Parts
 | Part | QTY | Price ($) | Link |
@@ -70,9 +100,9 @@ Implemented in VHDL, this project aims to achieve the following goals:
 | Metal Mecanum Wheel with Motor Shaft Coupling (Left and Right) | 4 | 8.90 per unit | [Product Link](https://www.dfrobot.com/product-2301.html)
 
 # Mecanum Wheels Chart
-The following reference was used to determine the drive directions of the robot.
+The following reference from goBILDA was used to determine the drive directions of the robot.
 
-For reference, the register that determines the motor direction and the PWM enable signals consists of the following decimal values based on the specified directions:
+The register that determines the motor direction and the PWM enable signals consists of the following decimal values based on the specified directions:
 
 - Move Forward: 63
 - Move Backward: 207
@@ -84,6 +114,48 @@ For reference, the register that determines the motor direction and the PWM enab
 - Move Diagonal Forward-Right: 57
 
 ![Mecanum Wheels Chart](./screenshots/mecanum_wheels_chart.png)
+
+# Web UI
+
+The following figures present the control menu of the Web UI.
+
+## Drive Control Menu
+
+![Drive Control Menu](./screenshots/results/WebUI_drive_control_menu.png)
+
+## Image Processing Menu
+
+![Image Processing Menu](./screenshots/results/WebUI_image_processing_menu.png)
+
+## Servo Control Menu
+
+![Servo Control Menu](./screenshots/results/WebUI_servo_control_menu.png)
+
+## UART Test Menu
+
+![UART Test Menu](./screenshots/results/WebUI_UART_test.png)
+
+# Spatial Filter Results
+
+## Average Filter
+
+![Average Filter Result](./screenshots/results/averaging_WebUI_result.png)
+
+## Edge Detection: Laplacian
+
+![Edge Detection Result](./screenshots/results/laplacian_WebUI_result.png)
+
+## Threshold (Binary Image): Threshold Value of 165
+
+![Threshold Filter Result 1](./screenshots/results/threshold_WebUI_result.png)
+
+## Threshold (Binary Image): Threshold Value of 80
+
+![Threshold Filter Result 2](./screenshots/results/threshold2_WebUI_result.png)
+
+## Image Inversion
+
+![Image Inversion Result](./screenshots/results/image_inversion_WebUI_result.png)
 
 # Development Tools
 * Software: Vivado
@@ -104,6 +176,9 @@ For reference, the register that determines the motor direction and the PWM enab
 
 ## VGA Controller
 - [Pmod VGA by Digilent](https://digilent.com/reference/pmod/pmodvga/start?redirect=1)
+
+## ECE 524 Lecture Slides
+- Prepared by Dr. Shahnam Mirzaei
 
 # Testing Strategies
 ### VGA
