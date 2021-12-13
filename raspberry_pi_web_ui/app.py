@@ -217,7 +217,6 @@ def test_uart_loopback_1():
     GPIO.output(read_enable_input_bram_pin, 1)
     GPIO.output(write_enable_output_bram_pin, 0)
     GPIO.output(read_enable_output_bram_pin, 0)
-    GPIO.output(start_rx_instruction, 0)
 
     tx_start_time = time.perf_counter()
     with open(os.path.join("/home/pi/ece524_proj/", "test_logs/test_uart_loopback_1_log.txt"), "w") as file_for_output_data:
@@ -236,7 +235,6 @@ def test_uart_loopback_1():
     GPIO.output(read_enable_input_bram_pin, 0)
     GPIO.output(write_enable_output_bram_pin, 0)
     GPIO.output(read_enable_output_bram_pin, 0)
-    GPIO.output(start_rx_instruction, 0)
     logging.info("UART Loopback Test 1 Done!")
     logging.info(f"Elapsed Time: {tx_end_time - tx_start_time}\n")
 
@@ -263,7 +261,6 @@ def test_uart_loopback_2():
     GPIO.output(read_enable_input_bram_pin, 1)
     GPIO.output(write_enable_output_bram_pin, 0)
     GPIO.output(read_enable_output_bram_pin, 0)
-    GPIO.output(start_rx_instruction, 0)
 
     tx_start_time = time.perf_counter()
     with open(os.path.join("/home/pi/ece524_proj/", "test_logs/test_uart_loopback_2_log.txt"), "w") as file_for_output_data:
@@ -284,7 +281,6 @@ def test_uart_loopback_2():
     GPIO.output(read_enable_input_bram_pin, 0)
     GPIO.output(write_enable_output_bram_pin, 0)
     GPIO.output(read_enable_output_bram_pin, 0)
-    GPIO.output(start_rx_instruction, 0)
     logging.info("UART Loopback Test 2 Done!")
     logging.info(f"Elapsed Time: {tx_end_time - tx_start_time}\n")
 
@@ -327,11 +323,13 @@ def read_and_save_image(input_image_text_file, output_image_text_file, input_ima
         plt.imsave(output_image_name, reshaped_img_array, cmap='gray')
 
 '''
-    Function: apply_spatial_filter_to_image(selected_filter, input_image_file, output_image_file)
+    Function: apply_spatial_filter_to_image(selected_filter, input_image_file, output_image_file, selected_threshold_value_int, camera_mode_status)
     Parameters:
         - selected_filter: The name of the filter selected by the user
         - input_image_file: The name of the text file that the input image is written to
         - output_image_file: The name of the text file that the output image is written to
+        - selected_threshold_value_int: The value obtained from the Threshold Slider from the Web UI
+        - camera_mode_status: Determines whether or not the toggle switch for enabling the camera mode is on or off
     
     This function will transmit the image matrix to the FPGA, and once the FPGA has finished
     applying the filter, it will output back the contents of the output BRAM to the
@@ -416,7 +414,7 @@ def apply_spatial_filter_to_image(selected_filter, input_image_file, output_imag
     
     rx_end_time = time.perf_counter()
     logging.info("Transmission of Data from Raspberry Pi to FPGA Done!")
-    logging.info(f"Elapsed Time: {tx_end_time - tx_start_time}")
+    logging.info(f"Elapsed Time: {rx_end_time - rx_start_time}")
     GPIO.output(write_enable_input_bram_pin, 0)
     GPIO.output(read_enable_input_bram_pin, 0)
     GPIO.output(write_enable_output_bram_pin, 0)
@@ -688,7 +686,7 @@ def reset_servo_camera_position():
     GPIO.output(rx_instruction_active, 0)
     logging.info("Servo Camera Instruction Sent to FPGA")
 
-# No caching at all for API endpoints.
+# Cache Configuration
 @app.after_request
 def add_header(response):
     # response.cache_control.no_store = True

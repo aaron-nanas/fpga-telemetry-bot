@@ -4,16 +4,17 @@
 --      Interfaces the following controllers:
 --          - Spatial Filter FSM Controller
 --          - Quad DC Motor Controller
+--          - Distance Sensor
 --          - Servo Controller
 --      Initially receives 3 bytes from the Raspberry Pi via UART, which is turned into a 24-bit instruction
 --      Processes the 24-bit instruction received from the Raspberry Pi and applies enable signals accordingly
 --
 -- Instructions:
--- The Tx pin of the Raspberry Pi will first transmit the instructions to the FSM Controller.
+-- The Tx pin of the Raspberry Pi will first transmit the instructions to the top-level controller.
 -- This instruction will contain 24 bits, and the FSM controller will handle what signals will be set
 -- depending on the active mode specified.
 --
--- Each byte sent will then be concatenated to a register with a width of (23 downto 0)
+-- Each byte sent will then be concatenated and stored into a register with a width of (23 downto 0)
 -- Then, the FSM controller decodes the 24-bit data
 --
 -- Drive Mode Example:

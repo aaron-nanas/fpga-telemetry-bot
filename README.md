@@ -52,15 +52,27 @@ Professor:
 Implemented in VHDL, this project has achieved the following goals:
 
 - Established UART between an external device (which could be a microcontroller or a processor) such as a Raspberry Pi and an FPGA/SoC board such as the Zybo Z7-20
+    - Configuration: Start and Stop Bits and Baud Rate of 921600
+    - If the `rx_instruction_active` flag is set as high (i.e. logic level 1), the UART input data stream from the Raspberry Pi will be directed to the `uart_rx_for_fsm` component
+        - The Raspberry Pi sends 3 bytes of data, which will be stored in a 24-bit instruction register
+        - The instruction register determines which mode of operation (i.e. drive mode, filter mode, enable sensor) should be active based on the value of the lower 8 bits
+        - The instruction register also determines the following values based on the current active mode: duty cycle for the 12V DC motors, the motor directions, the PWM enable signals, the filter selected by the user, the threshold value when the threshold filter is selected, and the servo position
+    - For a detailed description of the instruction register process, refer to the README found in the following path: `fpga_telemetry_bot_main/telemetry_bot_top/README.md`
 
 - Using the Raspberry Pi's Wi-Fi capability, a web UI is created that allows the user to send signals to the FPGA wirelessly via UART. The FPGA then performs the associated actions according to the instructions specified by the user
     - Flask is used as the web framework
     - A Flask app implemented in Python is run from the Raspberry Pi. A module called `serial` is used in order to transmit and receive data streams via UART, with a baud rate of 921600
     - The web UI is designed using HTML/CSS/Javascript, with Flask serving as the web framework
 
-- Designed a motor controller that instantiates multiple instances of a PWM generator to control four DC motors. The motor controller includes features such as speed control and changing directions
+- Designed a motor controller that instantiates four PWM generator instances to control four 12V DC motors. The motor controller includes features such as speed control and changing directions
 
 - Interfaced a servo motor that controls the horizontal position of the camera
+    - PWM signal range of 575 - 2460 μsec
+    - Refresh rate of 50 Hz
+    - Servo positions are divided into 10, with 1 representing the initial position (when it has not rotated) and 10 the maximum (when it has fully rotated to 180 degrees)
+    - Pressing the `Move Left` button from the Servo Control menu of the Web UI decrements the servo position by 1
+    - Pressing the `Move Right` button from the Servo Control menu of the Web UI increments the servo position by 1
+    - Increasing the PWM signal will rotate the servo in a clockwise direction
 
 - Interfaced an Ultrasonic Range Finder that displays the range in inches on the Pmod Seven-Segment Display
 
@@ -173,7 +185,7 @@ The following figures present the control menu of the Web UI.
 ## VGA Controller
 - [Pmod VGA by Digilent](https://digilent.com/reference/pmod/pmodvga/start?redirect=1)
 
-## ECE 524 Lecture Slides
+## ECE 524 and ECE 551 Lecture Slides
 - Prepared by Dr. Shahnam Mirzaei
 
 # Testing Strategies
