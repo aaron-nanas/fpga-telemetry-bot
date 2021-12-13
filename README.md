@@ -75,8 +75,17 @@ Implemented in VHDL, this project has achieved the following goals:
     - Increasing the PWM signal will rotate the servo in a clockwise direction
 
 - Interfaced an Ultrasonic Range Finder that displays the range in inches on the Pmod Seven-Segment Display
+    - Every 147 μs that it is at a logic level high is equal to 1 inch away from the sensor
+    - First counter increments from 0 to (147 μs * 125)
+        - Set as 125 to match the Zybo's clock frequency of 125 MHz
+    - If the upper limit is reached for the first counter, it starts incrementing a second counter
+        - The second counter then determines the distance value in inches and is registered
 
-- Designed a top-level FSM controller that sends signals to both the motor and the sensor controllers based on the data received via UART
+- Designed a top-level FSM controller that interfaces the following lower-level components:
+    - Servo Controller
+    - DC Motor Controller
+    - Distance Sensor Interface
+    - Spatial Filter FSM Controller
 
 - Image Processing: Applies a spatial filter to an image
     - The implemented filters are the following: Average Filter, Edge Detection (Laplacian), Image Inversion, and Threshold (Binary)
@@ -84,7 +93,7 @@ Implemented in VHDL, this project has achieved the following goals:
     - First, the image is padded with zeros and is converted to grayscale, so each pixel is an 8-bit value ranging from 0 to 255. Then, the image matrix is sent via UART to the FPGA and stored in the Input Block RAM. The FPGA then applies a spatial filter and stores the output values to the Output Block RAM, and the processed image is transmitted to the Raspberry Pi. For this implementation, a total of 128 BRAM in the FPGA have been used.
     - The output image is then compared alongside the input image on the Web UI
 
-- To remove the need of programming the FPGA each time it is powered on, a Zynq Boot Image is created in order to store the bitstream and other necessary files into the Zybo Z7-20's QSPI Flash. After it boots up, the Zybo will read the contents of the QSPI Flash
+- To remove the need for programming the FPGA each time it is powered on, a Zynq Boot Image is created in order to store the bitstream and other necessary files into the Zybo Z7-20's QSPI Flash. After it boots up, the Zybo will read the contents of the QSPI Flash
 
 # Block Diagram of Design
 ![Block Diagram](./screenshots/fpga_top_level_hierarchy.png)
