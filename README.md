@@ -32,7 +32,7 @@ Professor:
 - Distance Sensor Demo: [Link](https://youtu.be/YtzdvDTfId4)
 
 # Directory Tree
-- `components`: Contains all the lower level components used
+- `components`: Contains all the lower level components used (VHDL)
 - `fpga_telemetry_bot_main`: The primary directory that contains the project's Vivado files. Specifically, the VHDL files can be found in the following path: `fpga_telemetry_bot_main/telemetry_bot_top/telemetry_bot_top.srcs/sources_1/new`
 - `MATLAB Scripts`: Contains the MATLAB project files, initially used to generate the sample image matrix and view the results after the sample image has been processed by the spatial filters
 - `raspberry_pi_web_ui`: Contains all the files for the Raspberry Pi, including the Python Flask app that serves the Web UI. The `templates` directory includes the HTML file, while the `static` directory consists of the CSS file, the input image directory, and the `image_results_for_ui` directory which is used to store the output images
