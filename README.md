@@ -216,7 +216,7 @@ The following figures present the control menu of the Web UI.
 # Creating the Zynq Boot Image for Zybo Z7-20
 General Procedure:
 
-1. Add all the design source files and the associated constraints file of the development being used. Click `Create Block Design` under IP Integrator. Then add the ZYNQ7 Processing System. Hit `Run Block Automation`. Then, connect `FCLK_CLK0` to the port `M_AXI_GP0_ACLK`. 
+1. Add all the design source files and the associated constraints file of the development board being used. Click `Create Block Design` under IP Integrator. Then add the ZYNQ7 Processing System. Hit `Run Block Automation`. Then, connect `FCLK_CLK0` to the port `M_AXI_GP0_ACLK`. 
 
 2. Double-click on the ZYNQ7 Processing System, select Clock Configuration, click the drop-down for PL Fabric Clocks, and change the frequency of `FCLK_CLK0` to 125 MHz. Note that this clock will be connected to the clock of the RTL design.
 
